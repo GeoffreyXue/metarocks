@@ -8,10 +8,10 @@
         "program": "${workspaceFolder}/example_parquet/parquet_example",
         "args": [],
         "stopAtEntry": false,
-        "cwd": "${workspaceFolder}",
+        "cwd": "${workspaceFolder}/example_parquet",
         "environment": [],
-        "externalConsole": false,
         "MIMode": "gdb",
+        "miDebuggerPath": "/usr/bin/gdb",
         "setupCommands": [
             {
                 "description": "Enable pretty-printing for gdb",
