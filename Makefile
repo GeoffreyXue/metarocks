@@ -58,7 +58,7 @@ else ifneq ($(filter shared_lib install-shared, $(MAKECMDGOALS)),)
 	DEBUG_LEVEL=0
 	LIB_MODE=shared
 else ifneq ($(filter static_lib install-static, $(MAKECMDGOALS)),)
-	DEBUG_LEVEL=0
+	DEBUG_LEVEL=2
 	LIB_MODE=static
 else ifneq ($(filter jtest rocksdbjava%, $(MAKECMDGOALS)),)
 	OBJ_DIR=jl

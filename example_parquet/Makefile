@@ -17,7 +17,7 @@ CFLAGS += -Wstrict-prototypes
 .PHONY: clean librocksdb
 
 parquet_example: librocksdb parquet_example.cc
-	$(CXX) $(CXXFLAGS) $@.cc -o$@ ../librocksdb.a -I../include -g -std=c++17 $(PLATFORM_LDFLAGS) $(PLATFORM_CXXFLAGS) $(EXEC_LDFLAGS)
+	$(CXX) $(CXXFLAGS) $@.cc -o$@ ../librocksdb_debug.a -I../include -g -std=c++17 $(PLATFORM_LDFLAGS) $(PLATFORM_CXXFLAGS) $(EXEC_LDFLAGS)
 
 .c.o:
 	$(CC) $(CFLAGS) -c $< -o $@ -I../include
