@@ -63,6 +63,11 @@ class CompactionOutputs {
     file_writer_.reset(writer);
   }
 
+  // Assign a new WritableFileWriter for the current output's parquet file
+  void AssignParquetFileWriter(WritableFileWriter* parquetWriter) {
+    parquet_file_writer_.reset(parquetWriter);
+  }
+
   // TODO: Remove it when remote compaction support tiered compaction
   void SetTotalBytes(uint64_t bytes) { stats_.bytes_written += bytes; }
   void SetNumOutputRecords(uint64_t num) { stats_.num_output_records = num; }
@@ -295,9 +300,10 @@ class CompactionOutputs {
 
   const Compaction* compaction_;
 
-  // current output builder and writer
+  // current output builder, writer, and parquet writer
   std::unique_ptr<TableBuilder> builder_;
   std::unique_ptr<WritableFileWriter> file_writer_;
+  std::unique_ptr<WritableFileWriter> parquet_file_writer_;
   uint64_t current_output_file_size_ = 0;
 
   // all the compaction outputs so far

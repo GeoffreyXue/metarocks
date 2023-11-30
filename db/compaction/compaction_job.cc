@@ -1957,6 +1957,26 @@ Status CompactionJob::OpenCompactionOutputFile(SubcompactionState* sub_compact,
 
   outputs.NewBuilder(tboptions);
 
+  // Creating parquet file, parquet file writer, and assigning it to CompactionOutputs
+  {
+    std::string parquet_fname = GetParquetFileName(file_number);
+    std::unique_ptr<FSWritableFile> parquet_writable_file;
+    // Use same file options as sstable file
+    IOStatus parquet_io_s = NewWritableFile(fs_.get(), parquet_fname, &parquet_writable_file, fo_copy);
+
+    parquet_writable_file->SetIOPriority(GetRateLimiterPriority());
+    parquet_writable_file->SetWriteLifeTimeHint(write_hint_);
+
+    parquet_writable_file->SetPreallocationBlockSize(static_cast<size_t>(
+    sub_compact->compaction->OutputFilePreallocationSize()));
+
+    // Parquet file writer keeps same file options, clock, tracer, stats, and checksum
+    outputs.AssignParquetFileWriter(new WritableFileWriter(
+    std::move(parquet_writable_file), parquet_fname, fo_copy, db_options_.clock, io_tracer_,
+    db_options_.stats, {}, db_options_.file_checksum_gen_factory.get(),
+    false, false));
+  }
+
   LogFlush(db_options_.info_log);
   return s;
 }
@@ -2123,6 +2143,11 @@ void CompactionJob::LogCompaction() {
 
 std::string CompactionJob::GetTableFileName(uint64_t file_number) {
   return TableFileName(compact_->compaction->immutable_options()->cf_paths,
+                       file_number, compact_->compaction->output_path_id());
+}
+
+std::string CompactionJob::GetParquetFileName(uint64_t file_number) {
+  return ParquetFileName(compact_->compaction->immutable_options()->cf_paths,
                        file_number, compact_->compaction->output_path_id());
 }
 
