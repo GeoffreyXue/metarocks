@@ -27,6 +27,7 @@ const std::string kOptionsFileNamePrefix = "OPTIONS-";
 const std::string kTempFileNameSuffix = "dbtmp";
 
 static const std::string kRocksDbTFileExt = "sst";
+static const std::string kParquetFileExt = "parquet";
 static const std::string kLevelDbTFileExt = "ldb";
 static const std::string kRocksDBBlobFileExt = "blob";
 static const std::string kArchivalDirName = "archive";
@@ -112,6 +113,10 @@ std::string MakeTableFileName(const std::string& path, uint64_t number) {
   return MakeFileName(path, number, kRocksDbTFileExt.c_str());
 }
 
+std::string MakeParquetFileName(const std::string& path, uint64_t number) {
+  return MakeFileName(path, number, kParquetFileExt.c_str());
+}
+
 std::string MakeTableFileName(uint64_t number) {
   return MakeFileName(number, kRocksDbTFileExt.c_str());
 }
@@ -147,6 +152,19 @@ std::string TableFileName(const std::vector<DbPath>& db_paths, uint64_t number,
   }
   return MakeTableFileName(path, number);
 }
+
+std::string ParquetFileName(const std::vector<DbPath>& db_paths, uint64_t number,
+                          uint32_t path_id) {
+  assert(number > 0);
+  std::string path;
+  if (path_id >= db_paths.size()) {
+    path = db_paths.back().path;
+  } else {
+    path = db_paths[path_id].path;
+  }
+  return MakeParquetFileName(path, number);
+}
+
 
 void FormatFileNumber(uint64_t number, uint32_t path_id, char* out_buf,
                       size_t out_buf_size) {
