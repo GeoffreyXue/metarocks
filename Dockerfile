@@ -45,7 +45,8 @@ RUN apt-get install -y fuse libcurl4-gnutls-dev libfuse-dev
 RUN apt-get install -y bear
 
 # install apache arrow for dev development for C++
-RUN apt-get install -y libarrow-dev
+# TODO: Must be done manually
+# RUN apt-get install -y libarrow-dev
 
 # install gtest-parallel package
 RUN git clone --single-branch --branch master --depth 1 https://github.com/google/gtest-parallel.git ~/gtest-parallel
