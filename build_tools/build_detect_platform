@@ -275,6 +275,11 @@ if [ "$CROSS_COMPILE" = "true" -o "$FBCODE_BUILD" = "true" ]; then
     fi
     true
 else
+    # Force inclusion of arrow for flags
+    COMMON_FLAGS="$COMMON_FLAGS -DARROW"
+    PLATFORM_LDFLAGS="$PLATFORM_LDFLAGS -larrow"
+    JAVA_LDFLAGS="$JAVA_LDFLAGS -larrow"
+
     if ! test $ROCKSDB_DISABLE_FALLOCATE; then
         # Test whether fallocate is available
         $CXX $PLATFORM_CXXFLAGS -x c++ - -o test.o 2>/dev/null  <<EOF
