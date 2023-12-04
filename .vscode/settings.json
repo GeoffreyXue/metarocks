@@ -1,5 +1,5 @@
 {
-    "explorer.excludeGitIgnore": true,
+    "explorer.excludeGitIgnore": false,
     "cmake.configureOnOpen": false,
     "editor.tabSize": 2
 }
