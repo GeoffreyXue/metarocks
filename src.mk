@@ -159,6 +159,7 @@ LIB_SOURCES =                                                   \
   options/options.cc                                            \
   options/options_helper.cc                                     \
   options/options_parser.cc                                     \
+	parquet/parquet_writer.cc																			\
   port/mmap.cc                                                  \
   port/port_posix.cc                                            \
   port/win/env_default.cc                                       \

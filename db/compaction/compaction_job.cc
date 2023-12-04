@@ -43,6 +43,7 @@
 #include "monitoring/thread_status_util.h"
 #include "options/configurable_helper.h"
 #include "options/options_helper.h"
+#include "parquet/parquet_writer.h"
 #include "port/port.h"
 #include "rocksdb/db.h"
 #include "rocksdb/env.h"
@@ -1957,24 +1958,10 @@ Status CompactionJob::OpenCompactionOutputFile(SubcompactionState* sub_compact,
 
   outputs.NewBuilder(tboptions);
 
-  // Creating parquet file, parquet file writer, and assigning it to CompactionOutputs
+  // Creating parquet file writer
   {
     std::string parquet_fname = GetParquetFileName(file_number);
-    std::unique_ptr<FSWritableFile> parquet_writable_file;
-    // Use same file options as sstable file
-    IOStatus parquet_io_s = NewWritableFile(fs_.get(), parquet_fname, &parquet_writable_file, fo_copy);
-
-    parquet_writable_file->SetIOPriority(GetRateLimiterPriority());
-    parquet_writable_file->SetWriteLifeTimeHint(write_hint_);
-
-    parquet_writable_file->SetPreallocationBlockSize(static_cast<size_t>(
-    sub_compact->compaction->OutputFilePreallocationSize()));
-
-    // Parquet file writer keeps same file options, clock, tracer, stats, and checksum
-    outputs.AssignParquetFileWriter(new WritableFileWriter(
-    std::move(parquet_writable_file), parquet_fname, fo_copy, db_options_.clock, io_tracer_,
-    db_options_.stats, {}, db_options_.file_checksum_gen_factory.get(),
-    false, false));
+    outputs.AssignParquetFileWriter(new ParquetWriter(parquet_fname));
   }
 
   LogFlush(db_options_.info_log);

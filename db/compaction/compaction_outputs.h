@@ -16,6 +16,8 @@
 #include "db/internal_stats.h"
 #include "db/output_validator.h"
 
+#include "parquet/parquet_writer.h"
+
 namespace ROCKSDB_NAMESPACE {
 
 class CompactionOutputs;
@@ -63,8 +65,8 @@ class CompactionOutputs {
     file_writer_.reset(writer);
   }
 
-  // Assign a new WritableFileWriter for the current output's parquet file
-  void AssignParquetFileWriter(WritableFileWriter* parquetWriter) {
+  // Assign a new ParquetWriter for the current output's parquet file
+  void AssignParquetFileWriter(ParquetWriter* parquetWriter) {
     parquet_file_writer_.reset(parquetWriter);
   }
 
@@ -303,7 +305,7 @@ class CompactionOutputs {
   // current output builder, writer, and parquet writer
   std::unique_ptr<TableBuilder> builder_;
   std::unique_ptr<WritableFileWriter> file_writer_;
-  std::unique_ptr<WritableFileWriter> parquet_file_writer_;
+  std::unique_ptr<ParquetWriter> parquet_file_writer_;
   uint64_t current_output_file_size_ = 0;
 
   // all the compaction outputs so far

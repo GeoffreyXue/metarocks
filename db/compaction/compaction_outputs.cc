@@ -70,12 +70,8 @@ IOStatus CompactionOutputs::WriterSyncClose(const Status& input_status,
     io_s = file_writer_->Close();
   }
 
-  IOStatus parquet_io_s;
   if (input_status.ok()) {
-    parquet_io_s = parquet_file_writer_->Sync(use_fsync);
-  }
-  if (input_status.ok() && parquet_io_s.ok()) {
-    parquet_io_s = parquet_file_writer_->Close();
+    parquet_file_writer_->Close();
   }
 
   // TODO: Add parquet file data to metadata
@@ -417,7 +413,9 @@ Status CompactionOutputs::AddToOutput(
   if (!s.ok()) {
     return s;
   }
+
   builder_->Add(key, value);
+  parquet_file_writer_->Add(key, value);
 
   stats_.num_output_records++;
   current_output_file_size_ = builder_->EstimatedFileSize();
