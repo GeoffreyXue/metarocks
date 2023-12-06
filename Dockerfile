@@ -44,9 +44,16 @@ RUN apt-get install -y fuse libcurl4-gnutls-dev libfuse-dev
 # install bear
 RUN apt-get install -y bear
 
-# install apache arrow for dev development for C++
-# TODO: Must be done manually
-# RUN apt-get install -y libarrow-dev
+# install apache arrow and parquet for dev development for C++
+RUN apt-get update && \
+    apt-get install -y -V ca-certificates lsb-release wget
+
+# Download and install Arrow and Parquet libraries
+RUN wget https://apache.jfrog.io/artifactory/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
+    apt-get install -y -V ./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
+    apt-get update && \
+    apt-get install -y -V libarrow-dev libparquet-dev && \
+    rm -rf ./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb
 
 # install gtest-parallel package
 RUN git clone --single-branch --branch master --depth 1 https://github.com/google/gtest-parallel.git ~/gtest-parallel
