@@ -40,14 +40,14 @@ int main() {
   assert(db);
 
 
-  for (int i = 1000; i < 99999; ++i) {
+  for (int i = 1; i < 10000; ++i) {
     db->Put(rocksdb::WriteOptions(), std::to_string(i),
             std::string(500, 'a' + (i % 26)));
   }
 
   // verify the values are still there
   std::string value;
-  for (int i = 1000; i < 99999; ++i) {
+  for (int i = 1; i < 10000; ++i) {
     db->Get(rocksdb::ReadOptions(), std::to_string(i), &value);
     assert(value == std::string(500, 'a' + (i % 26)));
   }
