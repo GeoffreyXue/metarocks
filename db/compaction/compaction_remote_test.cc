@@ -818,6 +818,32 @@ static std::string Key(int i) {
 
 std::string kDBPath = "/tmp/rocksdb_remote_test";
 
+static void PrintSSTableCounts(rocksdb::DB* db) {
+  std::vector<rocksdb::LiveFileMetaData> metadata;
+  db->GetLiveFilesMetaData(&metadata);
+  std::cout << "SSTable Counts: " << metadata.size() << std::endl;
+
+  rocksdb::ColumnFamilyMetaData meta;
+  db->GetColumnFamilyMetaData(&meta);
+
+  std::vector<int> sstable_files_by_level;
+  for (const auto& level : meta.levels) {
+    sstable_files_by_level.push_back(level.files.size());
+  }
+  
+  std::cout << "SSTable Files by Level: ";
+  for (std::vector<int>::size_type i = 0; i < sstable_files_by_level.size(); i++) {
+    std::cout << sstable_files_by_level[i] << " ";
+  }
+  std::cout << std::endl;
+}
+
+static void PrintStats(rocksdb::DB* db) {
+  std::string stats;
+  db->GetProperty("rocksdb.stats", &stats);
+  std::cout << "Stats: " << stats << std::endl;
+}
+
 int main(int argc, char** argv) {
   std::cout << "Remote Compaction Demo." << std::endl;
 
@@ -833,7 +859,8 @@ int main(int argc, char** argv) {
     options.env = env;
     options.create_if_missing = true;
     options.fail_if_options_file_error = true;
-    // options.disable_auto_compactions = true; // do not compact on client
+    options.disable_auto_compactions = true; // do not compact on client
+    // options.compaction_service will be set later
     primary_options = options;
   }
   std::shared_ptr<rocksdb::Statistics> primary_statistics;
@@ -849,9 +876,8 @@ int main(int argc, char** argv) {
   {
     rocksdb::Options options;
     options.env = env;
-    options.create_if_missing = true;
+    options.create_if_missing = false; // secondary
     options.fail_if_options_file_error = true;
-    // options.disable_auto_compactions = true; // do not compact on client
     compactor_options = options;
   }
 
@@ -899,7 +925,7 @@ int main(int argc, char** argv) {
   std::cout << "TEST: insert many values x10" << std::endl;
 
   const int BATCH_SIZE = 100000;
-  const int BATCHES = 10;
+  const int BATCHES = 2;
   for (int n = 0; n < BATCHES; n++) {
     auto start = std::chrono::high_resolution_clock::now();
 
@@ -916,6 +942,8 @@ int main(int argc, char** argv) {
     auto end = std::chrono::high_resolution_clock::now();
     std::chrono::duration<double> diff = end - start;
     std::cout << "Time: " << diff.count() << " s" << std::endl;
+
+    PrintSSTableCounts(db);
   }
 
   // SETUP: insert some test values to look for later
@@ -942,6 +970,7 @@ int main(int argc, char** argv) {
     s = db->Flush(rocksdb::FlushOptions());
     assert(s.ok());
   }
+  PrintSSTableCounts(db);
 
   std::cout << "Verifying values are correct" << std::endl;
 
@@ -955,114 +984,20 @@ int main(int argc, char** argv) {
     }
   }
 
-  // Compaction Setup
-
-  std::cout << "Setting up compaction job" << std::endl;
-
-  rocksdb::CompactionServiceInput input;
-  std::string compaction_input;  // to send to remote compactor
-  {
-    rocksdb::ColumnFamilyMetaData meta;
-    db->GetColumnFamilyMetaData(&meta);
-
-    // input.input_files
-    for (auto& file : meta.levels[0].files) {  // all lvl 0 files
-      // assert(0 == meta.levels[0].level);
-      input.input_files.push_back(file.name);
-    }
-
-    input.output_level = 1;  // compact from lvl 0 -> 1
-
-    // input.db_id
-    s = db->GetDbIdentity(
-        input.db_id);  // need id to generate sst file on remote
-    assert(s.ok());
-
-    input.Write(&compaction_input);
-  }
-
-  // Start remote compaction
-
-  std::cout << "Sending compaction job" << std::endl;
-
-  {
-    rocksdb::CompactionServiceJobStatus rc_status;
-
-    rocksdb::CompactionServiceJobInfo info = cs->GetCompactionInfoForStart();
-    std::string compaction_service_input = compaction_input;
-    std::cout << compaction_service_input << std::endl;
-    rc_status =
-        cs->StartV2(info, compaction_service_input);  // client compaction call
-
-    if (rc_status == rocksdb::CompactionServiceJobStatus::kFailure) {
-      std::cout << "Failed to start remote compaction" << std::endl;
-      return 1;
-    } else if (rc_status == rocksdb::CompactionServiceJobStatus::kUseLocal) {
-      std::cout << "Fallback to local compaction (unimplemented)" << std::endl;
-      return 1;
-    } else if (rc_status == rocksdb::CompactionServiceJobStatus::kSuccess) {
-      std::cout << "Remote compaction requested" << std::endl;
-    } else {
-      std::cout << "Unknown status" << std::endl;
-      return 1;
-    }
-  }
-
-  // Resolve remote compaction
-
-  std::cout << "Waiting for remote compaction to complete" << std::endl;
-
-  //  CompactionServiceJobInfo GetCompactionInfoForWait() { return wait_info_; }
-  std::string compaction_service_result;
-  {
-    rocksdb::CompactionServiceJobStatus rc_status;
-    rocksdb::CompactionServiceJobInfo wait_info =
-        cs->GetCompactionInfoForWait();
-    rc_status = cs->WaitForCompleteV2(wait_info, &compaction_service_result);
-    std::cout << compaction_service_result << std::endl;
-
-    if (rc_status == rocksdb::CompactionServiceJobStatus::kFailure) {
-      std::cout << "Recieved failure response from remote compactor"
-                << std::endl;
-      return 1;
-    } else if (rc_status == rocksdb::CompactionServiceJobStatus::kUseLocal) {
-      std::cout << "Fallback to local compaction (unimplemented)" << std::endl;
-      return 1;
-    } else if (rc_status == rocksdb::CompactionServiceJobStatus::kSuccess) {
-      std::cout << "Remote compaction complete" << std::endl;
-    } else {
-      std::cout << "Unknown status" << std::endl;
-      return 1;
-    }
-  }
-
-  // Decode result
-
-  // TODO it looks like actually creating the proper result object is not
-  // implemented
-  rocksdb::CompactionServiceResult deserialized;
-  {
-    rocksdb::CompactionServiceResult::Read(compaction_service_result,
-                                           &deserialized);
-    std::cout << compaction_service_result << std::endl;
-  }
-
-  // TODO Currently the wait method will actually do the compaction itself (it
-  // pretends to be the server)
-
-  /*  CompactionServiceJobStatus WaitForCompleteV2 (
-      const CompactionServiceJobInfo& info,
-      std::string* compaction_service_result) override;*/
-
-  // Send compaction input to remote compactor
-
   // Perform compaction
-  /*{
-    rocksdb::CompactRangeOptions coptions;
-    db->CompactRange(coptions, nullptr,
-                     nullptr);  // compact whole database, b/c nullptr is both
-                                // first and last record
-  }*/
+
+  auto num = cs->GetCompactionNum();
+
+  std::cout << "Performing compaction " << num << std::endl;
+
+  rocksdb::CompactRangeOptions coptions;
+  db->CompactRange(coptions, nullptr,
+                    nullptr);  // compact whole database, b/c nullptr is both
+                              // first and last record
+
+  num = cs->GetCompactionNum();
+
+  std::cout << "Compaction complete, now count is " << num << std::endl;
 
   // Verify values are correct
 
@@ -1077,6 +1012,12 @@ int main(int argc, char** argv) {
       assert(result == "value_new" + std::to_string(i));
     }
   }
+
+  // Statistics
+
+  PrintStats(db);
+  PrintSSTableCounts(db);
+
 
   std::cout << "Done with main" << std::endl;
 
