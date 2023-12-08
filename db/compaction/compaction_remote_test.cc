@@ -3,9 +3,17 @@
 //  COPYING file in the root directory) and Apache 2.0 License
 //  (found in the LICENSE.Apache file in the root directory).
 
+#include <iostream>
+
+#include "db.h"
+#include "db/compaction/compaction.h"
+#include "db/compaction/compaction_job.h"
 #include "db/compaction/compaction_service.h"
 #include "db/db_test_util.h"
 #include "port/stack_trace.h"
+#include "rocksdb/db.h"
+#include "rocksdb/options.h"
+#include "rocksdb/slice.h"
 #include "table/unique_id_impl.h"
 
 namespace ROCKSDB_NAMESPACE {
@@ -729,7 +737,8 @@ TEST_F(CompactionRemoteTest, TablePropertiesCollector) {
 
     Status AddUserKey(const Slice& /*user_key*/, const Slice& /*value*/,
                       EntryType /*type*/, SequenceNumber /*seq*/,
-                      uint64_t /*file_size*/) override {
+                      uint64_t /*file_size*/)
+    override {
       count_++;
       return Status::OK();
     }
@@ -801,9 +810,283 @@ TEST_F(CompactionRemoteTest, TablePropertiesCollector) {
 
 }  // namespace ROCKSDB_NAMESPACE
 
+static std::string Key(int i) {
+  char buf[100];
+  snprintf(buf, sizeof(buf), "key%06d", i);
+  return std::string(buf);
+}
+
+std::string kDBPath = "/tmp/rocksdb_remote_test";
+
 int main(int argc, char** argv) {
-  ROCKSDB_NAMESPACE::port::InstallStackTraceHandler();
-  ::testing::InitGoogleTest(&argc, argv);
-  RegisterCustomObjects(argc, argv);
-  return RUN_ALL_TESTS();
+  std::cout << "Remote Compaction Demo." << std::endl;
+
+  // Create DB
+  std::cout << "Creating db at " << kDBPath << std::endl;
+
+  rocksdb::DB* db;
+
+  rocksdb::Env* env = rocksdb::Env::Default();
+  rocksdb::Options primary_options;  // for client
+  {
+    rocksdb::Options options;
+    options.env = env;
+    options.create_if_missing = true;
+    options.fail_if_options_file_error = true;
+    // options.disable_auto_compactions = true; // do not compact on client
+    primary_options = options;
+  }
+  std::shared_ptr<rocksdb::Statistics> primary_statistics;
+  primary_statistics = ROCKSDB_NAMESPACE::CreateDBStatistics();
+
+  primary_options.statistics = primary_statistics;
+
+  // Create External Compaction Service
+
+  std::cout << "Creating compaction service" << std::endl;
+
+  rocksdb::Options compactor_options;
+  {
+    rocksdb::Options options;
+    options.env = env;
+    options.create_if_missing = true;
+    options.fail_if_options_file_error = true;
+    // options.disable_auto_compactions = true; // do not compact on client
+    compactor_options = options;
+  }
+
+  std::shared_ptr<rocksdb::ExternalCompactionService> compaction_service;
+  rocksdb::ExternalCompactionService* cs;
+  {
+    std::string db_path = kDBPath;
+    std::shared_ptr<rocksdb::Statistics> compactor_statistics =
+        ROCKSDB_NAMESPACE::CreateDBStatistics();
+    std::vector<std::shared_ptr<rocksdb::EventListener>> listeners;
+    std::vector<std::shared_ptr<rocksdb::TablePropertiesCollectorFactory>>
+        table_properties_collector_factories;
+
+    compaction_service =
+        std::make_shared<ROCKSDB_NAMESPACE::ExternalCompactionService>(
+            db_path, compactor_options, compactor_statistics, listeners,
+            table_properties_collector_factories);
+    cs = compaction_service.get();
+  }
+
+  primary_options.compaction_service = compaction_service;
+
+  assert(cs->GetCompactionNum() == 0);
+
+  // Write some values
+
+  rocksdb::Status s = rocksdb::DB::Open(primary_options, kDBPath, &db);
+  assert(s.ok());
+
+  // TEST: Write then read a key-value pair
+  std::cout << "TEST: write-read one value" << std::endl;
+
+  s = db->Put(rocksdb::WriteOptions(), "key1", "value1");
+  assert(s.ok());
+  {
+    std::string value;
+    s = db->Get(rocksdb::ReadOptions(), "key1", &value);
+    assert(s.ok());
+
+    assert(value == "value1");
+  }
+
+  // TEST: Time to write lots of values
+
+  std::cout << "TEST: insert many values x10" << std::endl;
+
+  const int BATCH_SIZE = 100000;
+  const int BATCHES = 10;
+  for (int n = 0; n < BATCHES; n++) {
+    auto start = std::chrono::high_resolution_clock::now();
+
+    for (int i = BATCH_SIZE * (n - 1); i < BATCH_SIZE * (n); i++) {
+      std::string key = "key" + std::to_string(i);
+      std::string value = "value" + std::to_string(i);
+      s = db->Put(rocksdb::WriteOptions(), key, value);
+      assert(s.ok());
+    }
+
+    s = db->Flush(rocksdb::FlushOptions());
+    assert(s.ok());
+
+    auto end = std::chrono::high_resolution_clock::now();
+    std::chrono::duration<double> diff = end - start;
+    std::cout << "Time: " << diff.count() << " s" << std::endl;
+  }
+
+  // SETUP: insert some test values to look for later
+  std::cout << "Inserting some more values" << std::endl;
+
+  for (int i = 0; i < 20; i++) {
+    for (int j = 0; j < 10; j++) {
+      int key_id = i * 10 + j;
+      s = db->Put(rocksdb::WriteOptions(), Key(key_id),
+                  "value" + std::to_string(key_id));
+      assert(s.ok());
+    }
+    s = db->Flush(rocksdb::FlushOptions());
+    assert(s.ok());
+  }
+
+  for (int i = 0; i < 10; i++) {
+    for (int j = 0; j < 10; j++) {
+      int key_id = i * 20 + j * 2;
+      s = db->Put(rocksdb::WriteOptions(), Key(key_id),
+                  "value_new" + std::to_string(key_id));
+      assert(s.ok());
+    }
+    s = db->Flush(rocksdb::FlushOptions());
+    assert(s.ok());
+  }
+
+  std::cout << "Verifying values are correct" << std::endl;
+
+  for (int i = 0; i < 200; i++) {
+    std::string result;
+    db->Get(rocksdb::ReadOptions(), Key(i), &result);
+    if (i % 2) {
+      assert(result == "value" + std::to_string(i));
+    } else {
+      assert(result == "value_new" + std::to_string(i));
+    }
+  }
+
+  // Compaction Setup
+
+  std::cout << "Setting up compaction job" << std::endl;
+
+  rocksdb::CompactionServiceInput input;
+  std::string compaction_input;  // to send to remote compactor
+  {
+    rocksdb::ColumnFamilyMetaData meta;
+    db->GetColumnFamilyMetaData(&meta);
+
+    // input.input_files
+    for (auto& file : meta.levels[0].files) {  // all lvl 0 files
+      // assert(0 == meta.levels[0].level);
+      input.input_files.push_back(file.name);
+    }
+
+    input.output_level = 1;  // compact from lvl 0 -> 1
+
+    // input.db_id
+    s = db->GetDbIdentity(
+        input.db_id);  // need id to generate sst file on remote
+    assert(s.ok());
+
+    input.Write(&compaction_input);
+  }
+
+  // Start remote compaction
+
+  std::cout << "Sending compaction job" << std::endl;
+
+  {
+    rocksdb::CompactionServiceJobStatus rc_status;
+
+    rocksdb::CompactionServiceJobInfo info = cs->GetCompactionInfoForStart();
+    std::string compaction_service_input = compaction_input;
+    std::cout << compaction_service_input << std::endl;
+    rc_status =
+        cs->StartV2(info, compaction_service_input);  // client compaction call
+
+    if (rc_status == rocksdb::CompactionServiceJobStatus::kFailure) {
+      std::cout << "Failed to start remote compaction" << std::endl;
+      return 1;
+    } else if (rc_status == rocksdb::CompactionServiceJobStatus::kUseLocal) {
+      std::cout << "Fallback to local compaction (unimplemented)" << std::endl;
+      return 1;
+    } else if (rc_status == rocksdb::CompactionServiceJobStatus::kSuccess) {
+      std::cout << "Remote compaction requested" << std::endl;
+    } else {
+      std::cout << "Unknown status" << std::endl;
+      return 1;
+    }
+  }
+
+  // Resolve remote compaction
+
+  std::cout << "Waiting for remote compaction to complete" << std::endl;
+
+  //  CompactionServiceJobInfo GetCompactionInfoForWait() { return wait_info_; }
+  std::string compaction_service_result;
+  {
+    rocksdb::CompactionServiceJobStatus rc_status;
+    rocksdb::CompactionServiceJobInfo wait_info =
+        cs->GetCompactionInfoForWait();
+    rc_status = cs->WaitForCompleteV2(wait_info, &compaction_service_result);
+    std::cout << compaction_service_result << std::endl;
+
+    if (rc_status == rocksdb::CompactionServiceJobStatus::kFailure) {
+      std::cout << "Recieved failure response from remote compactor"
+                << std::endl;
+      return 1;
+    } else if (rc_status == rocksdb::CompactionServiceJobStatus::kUseLocal) {
+      std::cout << "Fallback to local compaction (unimplemented)" << std::endl;
+      return 1;
+    } else if (rc_status == rocksdb::CompactionServiceJobStatus::kSuccess) {
+      std::cout << "Remote compaction complete" << std::endl;
+    } else {
+      std::cout << "Unknown status" << std::endl;
+      return 1;
+    }
+  }
+
+  // Decode result
+
+  // TODO it looks like actually creating the proper result object is not
+  // implemented
+  rocksdb::CompactionServiceResult deserialized;
+  {
+    rocksdb::CompactionServiceResult::Read(compaction_service_result,
+                                           &deserialized);
+    std::cout << compaction_service_result << std::endl;
+  }
+
+  // TODO Currently the wait method will actually do the compaction itself (it
+  // pretends to be the server)
+
+  /*  CompactionServiceJobStatus WaitForCompleteV2 (
+      const CompactionServiceJobInfo& info,
+      std::string* compaction_service_result) override;*/
+
+  // Send compaction input to remote compactor
+
+  // Perform compaction
+  /*{
+    rocksdb::CompactRangeOptions coptions;
+    db->CompactRange(coptions, nullptr,
+                     nullptr);  // compact whole database, b/c nullptr is both
+                                // first and last record
+  }*/
+
+  // Verify values are correct
+
+  std::cout << "Verifying values are correct" << std::endl;
+
+  for (int i = 0; i < 200; i++) {
+    std::string result;
+    db->Get(rocksdb::ReadOptions(), Key(i), &result);
+    if (i % 2) {
+      assert(result == "value" + std::to_string(i));
+    } else {
+      assert(result == "value_new" + std::to_string(i));
+    }
+  }
+
+  std::cout << "Done with main" << std::endl;
+
+  // clean up db in temp folder
+  delete db;
+  rocksdb::DestroyDB(kDBPath, primary_options);
+
+  // ROCKSDB_NAMESPACE::port::InstallStackTraceHandler();
+  //::testing::InitGoogleTest(&argc, argv);
+  // RegisterCustomObjects(argc, argv);
+  // return RUN_ALL_TESTS();
+  return 0;
 }
