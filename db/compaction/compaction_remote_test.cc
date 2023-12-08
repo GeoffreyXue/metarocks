@@ -1015,7 +1015,6 @@ int main(int argc, char** argv) {
 
   // Statistics
 
-  PrintStats(db);
   PrintSSTableCounts(db);
 
 

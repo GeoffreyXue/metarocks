@@ -13,24 +13,25 @@
         default = with nixpkgs.legacyPackages.${system}; mkShell {
           name = "rocksdb-dev";
 
-          xcbuildFlags = [
-           "MACOSX_DEPLOYMENT_TARGET=10.12"
-          ];
-
-          packages = [
-            nix
-
-            # rocksdb deps
+          buildInputs = with nixpkgs.legacyPackages.${system}; [
+            cmake
+            clang-tools
+            git
             zlib
             bzip2
             snappy
             lz4
             zstd
             gflags
-
-            cmake
-            clang-tools
           ];
+          
+          packages = [
+          ];
+
+          # set MACOSX_DEPLOYMENT_TARGET to 12.6
+          shellHook = ''
+            export MACOSX_DEPLOYMENT_TARGET=12.6
+          '';
         };
       });
     };
