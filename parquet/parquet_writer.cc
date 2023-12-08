@@ -1,14 +1,35 @@
 
-
-#include "parquet_writer.h"
-
 #include "arrow/io/file.h"
 #include "arrow/result.h"
 #include "arrow/status.h"
 
+#include "parquet_writer.h"
+#include <iostream>
+
 namespace ROCKSDB_NAMESPACE {
 
 ParquetWriter::ParquetWriter(const std::string& path) {
+  arrow::Status status = Init(path);
+  if (!status.ok()) {
+    std::cerr << "Error initializing: " << status.ToString() << std::endl;
+  }
+}
+
+void ParquetWriter::Add(const Slice& key, const Slice& value) {
+  arrow::Status status = AddRecord(key, value);
+  if (!status.ok()) {
+    std::cerr << "Error adding record: " << status.ToString() << std::endl;
+  }
+}
+
+void ParquetWriter::Close() {
+  arrow::Status status = CloseWriter();
+  if (!status.ok()) {
+    std::cerr << "Error closing writer: " << status.ToString() << std::endl;
+  }
+}
+
+arrow::Status ParquetWriter::Init(const std::string& path) {
   schema_ = arrow::schema({
     arrow::field("key", arrow::utf8()), 
     arrow::field("value", arrow::utf8())
@@ -31,9 +52,10 @@ ParquetWriter::ParquetWriter(const std::string& path) {
     arrow::RecordBatchBuilder::Make(schema_, arrow::default_memory_pool())
   );
 
+  return arrow::Status();
 }
 
-void ParquetWriter::Add(const Slice& key, const Slice& value) {
+arrow::Status ParquetWriter::AddRecord(const Slice& key, const Slice& value) {
   ARROW_RETURN_NOT_OK(builder_->GetFieldAs<arrow::StringBuilder>(0)->Append(key.data(), key.size()));
   ARROW_RETURN_NOT_OK(builder_->GetFieldAs<arrow::StringBuilder>(1)->Append(value.data(), value.size()));
 
@@ -43,18 +65,24 @@ void ParquetWriter::Add(const Slice& key, const Slice& value) {
     builder_->Flush()
   );
 
-  WriteRecordBatch(record_batch);
+  ARROW_RETURN_NOT_OK(WriteRecordBatch(record_batch));
+
+  return arrow::Status();
 }
 
-void ParquetWriter::WriteRecordBatch(const std::shared_ptr<arrow::RecordBatch>& record_batch) {
+arrow::Status ParquetWriter::WriteRecordBatch(const std::shared_ptr<arrow::RecordBatch>& record_batch) {
   // Write the Arrow RecordBatch directly to the Parquet file
   ARROW_RETURN_NOT_OK(parquet_writer_->WriteTable(
       *arrow::Table::FromRecordBatches(schema_, {record_batch}).ValueOrDie(),
       record_batch->num_rows()));
+  
+  return arrow::Status();
 }
 
-void ParquetWriter::Close() {
+arrow::Status ParquetWriter::CloseWriter() {
   ARROW_RETURN_NOT_OK(parquet_writer_->Close());
+
+  return arrow::Status();
 }
 
 }  // namespace ROCKSDB_NAMESPACE

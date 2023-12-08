@@ -18,7 +18,10 @@ public:
   void Close();
 
 private:
-  void WriteRecordBatch(const std::shared_ptr<arrow::RecordBatch>& record_batch);
+  arrow::Status Init(const std::string& path);
+  arrow::Status AddRecord(const Slice& key, const Slice& value);
+  arrow::Status WriteRecordBatch(const std::shared_ptr<arrow::RecordBatch>& record_batch);
+  arrow::Status CloseWriter();
 
   std::shared_ptr<arrow::RecordBatchBuilder> builder_;
   std::shared_ptr<parquet::arrow::FileWriter> parquet_writer_;
