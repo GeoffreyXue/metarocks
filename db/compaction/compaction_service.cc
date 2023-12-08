@@ -4,6 +4,8 @@
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
 
+#include <thread>
+
 namespace ROCKSDB_NAMESPACE {
 
 CompactionServiceJobStatus ExternalCompactionService::StartV2(
@@ -18,6 +20,16 @@ CompactionServiceJobStatus ExternalCompactionService::StartV2(
     return override_start_status_;
   }
   return s;
+}
+
+void OpenAndCompactInThread(
+    const OpenAndCompactOptions& options, const std::string& name,
+    const std::string& output_directory, const std::string& input,
+    std::string* output,
+    const CompactionServiceOptionsOverride& override_options, Status* s) {
+  *s = DB::OpenAndCompact(
+      options, name, output_directory,
+      input, output, override_options);
 }
 
 CompactionServiceJobStatus ExternalCompactionService::WaitForCompleteV2(
@@ -65,9 +77,24 @@ CompactionServiceJobStatus ExternalCompactionService::WaitForCompleteV2(
   OpenAndCompactOptions options;
   options.canceled = &canceled_;
 
-  Status s = DB::OpenAndCompact(
-      options, db_path_, db_path_ + "/" + std::to_string(info.job_id),
-      compaction_input, compaction_service_result, options_override);
+  Status s;
+  {
+    const rocksdb::OpenAndCompactOptions oac_options;
+    const std::string name = db_path_;
+    const std::string output_directory = db_path_ + "/" + std::to_string(info.job_id);
+    const std::string input = compaction_input;
+    std::string * output = compaction_service_result;
+    const rocksdb::CompactionServiceOptionsOverride override_options = options_override;
+
+    /*s = DB::OpenAndCompact(
+      options, name, output_directory,
+      input, output, override_options);*/
+
+    std::thread t(OpenAndCompactInThread, oac_options, name, output_directory, input, output, override_options, &s);
+    t.join();
+  }
+
+  
   if (is_override_wait_result_) {
     *compaction_service_result = override_wait_result_;
   }
@@ -84,5 +111,6 @@ ExternalCompactionService::~ExternalCompactionService() {
     // No need to explicitly delete members because smart pointers will handle it.
     return;
 }
+
 
 }  // namespace ROCKSDB_NAMESPACE
