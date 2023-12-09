@@ -1,4 +1,5 @@
 #include <string>
+#include <iostream>
 
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
@@ -39,9 +40,10 @@ int main() {
   assert(s.ok());
   assert(db);
 
+  std::cout << "{\"hello\":" + std::to_string(1) + ",\"world\":\"" + std::string(500, 'a' + (1 % 26)) + "\"}" << std::endl;
 
   for (int i = 1; i < 10000; ++i) {
-    std::string value = "{\"hello\":" + std::to_string(i) + ", \"world\":\"" + std::string(500, 'a' + (i % 26)) + "\"}";
+    std::string value = "{\"hello\":" + std::to_string(i) + ",\"world\":\"" + std::string(500, 'a' + (i % 26)) + "\"}";
     db->Put(rocksdb::WriteOptions(), std::to_string(i), value);
   }
 
@@ -50,7 +52,7 @@ int main() {
   for (int i = 1; i < 10000; ++i) {
     db->Get(rocksdb::ReadOptions(), std::to_string(i), &value);
     std::string val(500, 'a' + (i % 26));
-    std::string original = "{\"hello\":" + std::to_string(i) + ", \"world\": " + std::string(500, 'a' + (i % 26)) + "}";
+    std::string original = "{\"hello\":" + std::to_string(i) + ",\"world\": " + std::string(500, 'a' + (i % 26)) + "}";
     assert(value == original);
   }
 

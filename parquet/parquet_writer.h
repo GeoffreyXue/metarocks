@@ -15,7 +15,7 @@ class ParquetWriter {
 public:
   ParquetWriter(const std::string& path);
 
-  void Add(const Slice& key, const Slice& value);
+  void Add(const Slice& value);
 
   void Close();
 
@@ -24,13 +24,11 @@ private:
 
   arrow::Status InitWriter(const Slice& value);
 
-  arrow::Status AddRecord(const Slice& key, const Slice& value);
-  arrow::Status WriteRecordBatch(const std::shared_ptr<arrow::RecordBatch>& record_batch);
+  arrow::Status AddRecord(const Slice& value);
 
   arrow::Status CloseWriter();
 
   std::shared_ptr<arrow::io::FileOutputStream> outfile_;
-  std::shared_ptr<arrow::RecordBatchBuilder> builder_;
   std::shared_ptr<parquet::arrow::FileWriter> parquet_writer_;
 };
 

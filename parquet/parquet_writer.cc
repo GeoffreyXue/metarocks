@@ -25,7 +25,7 @@ ParquetWriter::ParquetWriter(const std::string& path) {
   assert(status.ok());
 }
 
-void ParquetWriter::Add(const Slice& key, const Slice& value) {
+void ParquetWriter::Add(const Slice& value) {
   if (parquet_writer_.get() == nullptr) {
     // Init writer
     arrow::Status status = InitWriter(value);
@@ -36,7 +36,7 @@ void ParquetWriter::Add(const Slice& key, const Slice& value) {
   }
 
   {
-    arrow::Status status = AddRecord(key, value);
+    arrow::Status status = AddRecord(value);
     if (!status.ok()) {
       std::cerr << "Error adding record: " << status.ToString() << std::endl;
     }
@@ -53,22 +53,19 @@ void ParquetWriter::Close() {
 }
 
 arrow::Status ParquetWriter::InitOutputStream(const std::string& path) {
-  // Parquet Writer
-  std::shared_ptr<arrow::io::FileOutputStream> outfile;
-  ARROW_ASSIGN_OR_RAISE(outfile, arrow::io::FileOutputStream::Open(path));
+  ARROW_ASSIGN_OR_RAISE(outfile_, arrow::io::FileOutputStream::Open(path));
 
   return arrow::Status();
 }
 
 arrow::Status ParquetWriter::InitWriter(const Slice& value) {
-  std::string valueString(value.data(), value.size());
+  std::string value_string(value.data(), value.size());
 
   const uint8_t* data = reinterpret_cast<const uint8_t*>(value.data());
   int64_t size = static_cast<int64_t>(value.size());
 
   std::shared_ptr<arrow::Buffer> buffer = arrow::Buffer::Wrap(data, size);
   std::shared_ptr<arrow::io::BufferReader> buffer_reader = std::make_shared<arrow::io::BufferReader>(buffer);
-
 
   ARROW_ASSIGN_OR_RAISE(std::shared_ptr<arrow::json::TableReader> reader, 
     arrow::json::TableReader::Make(
@@ -86,35 +83,32 @@ arrow::Status ParquetWriter::InitWriter(const Slice& value) {
                         parquet::arrow::FileWriter::Open(
                         *schema, arrow::default_memory_pool(), outfile_));
 
-  // Record Batch Builder
-  ARROW_ASSIGN_OR_RAISE(builder_, arrow::RecordBatchBuilder::Make(
-                        schema, arrow::default_memory_pool()));
-
   return arrow::Status();
 }
 
-arrow::Status ParquetWriter::AddRecord(const Slice& key, const Slice& value) {
-  ARROW_RETURN_NOT_OK(builder_->GetFieldAs<arrow::StringBuilder>(0)->Append(
-      key.data(), key.size()));
-  ARROW_RETURN_NOT_OK(builder_->GetFieldAs<arrow::StringBuilder>(1)->Append(
-      value.data(), value.size()));
+arrow::Status ParquetWriter::AddRecord(const Slice& value) {
+  std::string value_string(value.data(), value.size());
 
-  std::shared_ptr<arrow::RecordBatch> record_batch;
-  ARROW_ASSIGN_OR_RAISE(record_batch, builder_->Flush());
+  const uint8_t* data = reinterpret_cast<const uint8_t*>(value.data());
+  int64_t size = static_cast<int64_t>(value.size());
 
-  ARROW_RETURN_NOT_OK(WriteRecordBatch(record_batch));
+  std::shared_ptr<arrow::Buffer> buffer = arrow::Buffer::Wrap(data, size);
+  std::shared_ptr<arrow::io::BufferReader> buffer_reader = std::make_shared<arrow::io::BufferReader>(buffer);
 
-  return arrow::Status();
-}
+  arrow::json::ParseOptions parse_options = arrow::json::ParseOptions::Defaults();
+  parse_options.explicit_schema = parquet_writer_->schema();
 
-arrow::Status ParquetWriter::WriteRecordBatch(
-    const std::shared_ptr<arrow::RecordBatch>& record_batch) {
-  // Write the Arrow RecordBatch directly to the Parquet file
-  ARROW_RETURN_NOT_OK(parquet_writer_->WriteTable(
-      *arrow::Table::FromRecordBatches(parquet_writer_->schema(),
-                                       {record_batch})
-           .ValueOrDie(),
-      record_batch->num_rows()));
+  ARROW_ASSIGN_OR_RAISE(std::shared_ptr<arrow::json::TableReader> reader, 
+    arrow::json::TableReader::Make(
+      arrow::default_memory_pool(), 
+      buffer_reader, 
+      arrow::json::ReadOptions::Defaults(), 
+      parse_options
+  ));
+
+  ARROW_ASSIGN_OR_RAISE(std::shared_ptr<arrow::Table> table, reader->Read());
+
+  ARROW_RETURN_NOT_OK(parquet_writer_->WriteTable(*table));
 
   return arrow::Status();
 }
