@@ -3,6 +3,7 @@
     "llvm-vs-code-extensions.vscode-clangd",
     "vadimcn.vscode-lldb",
     "usernamehw.errorlens",
-    "ms-vscode.cpptools"
+    "ms-vscode.cpptools",
+    "dvirtz.parquet-viewer"
   ]
 }

@@ -52,16 +52,6 @@ ENV PROTOC_BIN /root/libprotobuf-mutator/build/external.protobuf/bin/protoc
 RUN git clone --depth 1 --branch v1.7.0 https://github.com/google/benchmark.git ~/benchmark
 RUN cd ~/benchmark && mkdir build && cd build && cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_ENABLE_GTEST_TESTS=0 && ninja -j8 && ninja install
 
-### Custom: Add metaarrow repository and build
-# Install required dependencies for build
-RUN apt-get install -y build-essential
-
-RUN git clone --depth 1 -b dev https://github.com/GeoffreyXue/metaarrow.git ~/arrow
-RUN cd ~/arrow/cpp && mkdir build && cd build && cmake .. -DARROW_PARQUET=ON -DARROW_JSON=ON -GNinja && \
-    ninja -j8 && ninja install
-ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/usr/local/include
-RUN ldconfig
-
 # clean up
 RUN rm -rf /var/lib/apt/lists/*
 RUN rm -rf /root/benchmark
