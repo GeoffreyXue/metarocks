@@ -1,4 +1,4 @@
-# from official ubuntu 20.04
+### Copied from build_tools/ubuntu20_image/Dockerfile
 FROM ubuntu:20.04
 # update system
 RUN apt-get update && apt-get upgrade -y
@@ -38,36 +38,27 @@ ENV JAVA_HOME /usr/lib/jvm/java-1.8.0-openjdk-amd64
 # install mingw
 RUN apt-get install -y mingw-w64
 
-# install fuse, libcurl, and libfuse for s3fuse
-RUN apt-get install -y fuse libcurl4-gnutls-dev libfuse-dev
-
-# install bear
-RUN apt-get install -y bear
-
-# install apache arrow and parquet for dev development for C++
-RUN apt-get update && \
-    apt-get install -y -V ca-certificates lsb-release wget
-
-# Download and install Arrow and Parquet libraries
-RUN wget https://apache.jfrog.io/artifactory/arrow/$(lsb_release --id --short | tr 'A-Z' 'a-z')/apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
-    apt-get install -y -V ./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb && \
-    apt-get update && \
-    apt-get install -y -V libarrow-dev libparquet-dev && \
-    rm -rf ./apache-arrow-apt-source-latest-$(lsb_release --codename --short).deb
-
 # install gtest-parallel package
 RUN git clone --single-branch --branch master --depth 1 https://github.com/google/gtest-parallel.git ~/gtest-parallel
 ENV PATH $PATH:/root/gtest-parallel
 
 # install libprotobuf for fuzzers test
 RUN apt-get install -y ninja-build binutils liblzma-dev libz-dev pkg-config autoconf libtool
-RUN git clone --branch v1.0 https://github.com/google/libprotobuf-mutator.git ~/libprotobuf-mutator && cd ~/libprotobuf-mutator && git checkout ffd86a32874e5c08a143019aad1aaf0907294c9f && mkdir build && cd build && cmake .. -GNinja -DCMAKE_C_COMPILER=clang-13 -DCMAKE_CXX_COMPILER=clang++-13 -DCMAKE_BUILD_TYPE=Release -DLIB_PROTO_MUTATOR_DOWNLOAD_PROTOBUF=ON && ninja && ninja install
+RUN git clone --branch v1.0 https://github.com/google/libprotobuf-mutator.git ~/libprotobuf-mutator && cd ~/libprotobuf-mutator && git checkout ffd86a32874e5c08a143019aad1aaf0907294c9f && mkdir build && cd build && cmake .. -GNinja -DCMAKE_C_COMPILER=clang-13 -DCMAKE_CXX_COMPILER=clang++-13 -DCMAKE_BUILD_TYPE=Release -DLIB_PROTO_MUTATOR_DOWNLOAD_PROTOBUF=ON && ninja -j8 && ninja install
 ENV PKG_CONFIG_PATH /usr/local/OFF/:/root/libprotobuf-mutator/build/external.protobuf/lib/pkgconfig/
 ENV PROTOC_BIN /root/libprotobuf-mutator/build/external.protobuf/bin/protoc
 
 # install the latest google benchmark
 RUN git clone --depth 1 --branch v1.7.0 https://github.com/google/benchmark.git ~/benchmark
-RUN cd ~/benchmark && mkdir build && cd build && cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_ENABLE_GTEST_TESTS=0 && ninja && ninja install
+RUN cd ~/benchmark && mkdir build && cd build && cmake .. -GNinja -DCMAKE_BUILD_TYPE=Release -DBENCHMARK_ENABLE_GTEST_TESTS=0 && ninja -j8 && ninja install
+
+### Custom: Add metaarrow repository and build
+# Install required dependencies for build
+RUN apt-get install -y build-essential
+
+RUN git clone --depth 1 -b dev https://github.com/GeoffreyXue/metaarrow.git ~/arrow
+RUN cd ~/arrow/cpp && mkdir build && cd build && cmake .. -DARROW_PARQUET=ON -DARROW_JSON=ON -GNinja && \
+    ninja -j8 && ninja install
 
 # clean up
 RUN rm -rf /var/lib/apt/lists/*
