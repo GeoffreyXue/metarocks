@@ -38,6 +38,11 @@ add_executable(options_file_example
 target_link_libraries(options_file_example
   ${ROCKSDB_LIB})
 
+add_executable(remote_compaction_example
+  remote_compaction_example.cc)
+target_link_libraries(remote_compaction_example
+  ${ROCKSDB_LIB})
+
 add_executable(multi_processes_example
   EXCLUDE_FROM_ALL
   multi_processes_example.cc)
