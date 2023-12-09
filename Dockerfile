@@ -59,6 +59,8 @@ RUN apt-get install -y build-essential
 RUN git clone --depth 1 -b dev https://github.com/GeoffreyXue/metaarrow.git ~/arrow
 RUN cd ~/arrow/cpp && mkdir build && cd build && cmake .. -DARROW_PARQUET=ON -DARROW_JSON=ON -GNinja && \
     ninja -j8 && ninja install
+ENV LD_LIBRARY_PATH $LD_LIBRARY_PATH:/usr/local/include
+RUN ldconfig
 
 # clean up
 RUN rm -rf /var/lib/apt/lists/*
