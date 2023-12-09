@@ -1,4 +1,4 @@
-#include "db/compaction/compaction_service.h"
+#include "rocksdb/compaction_service.h"
 
 #include "monitoring/instrumented_mutex.h"
 #include "rocksdb/db.h"

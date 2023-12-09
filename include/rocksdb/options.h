@@ -19,6 +19,7 @@
 #include <vector>
 
 #include "rocksdb/advanced_options.h"
+#include "rocksdb/compaction_service.h"
 #include "rocksdb/comparator.h"
 #include "rocksdb/compression_type.h"
 #include "rocksdb/customizable.h"
@@ -31,8 +32,6 @@
 #include "rocksdb/universal_compaction.h"
 #include "rocksdb/version.h"
 #include "rocksdb/write_buffer_manager.h"
-
-#include "db/compaction/compaction_service.h"
 
 #ifdef max
 #undef max

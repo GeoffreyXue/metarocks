@@ -8,7 +8,7 @@
 #include "db.h"
 #include "db/compaction/compaction.h"
 #include "db/compaction/compaction_job.h"
-#include "db/compaction/compaction_service.h"
+#include "rocksdb/compaction_service.h"
 #include "db/db_test_util.h"
 #include "port/stack_trace.h"
 #include "rocksdb/db.h"
