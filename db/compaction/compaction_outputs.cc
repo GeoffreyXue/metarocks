@@ -415,7 +415,7 @@ Status CompactionOutputs::AddToOutput(
   }
 
   builder_->Add(key, value);
-  parquet_file_writer_->Add(key, value);
+  parquet_file_writer_->Add(value);
 
   stats_.num_output_records++;
   current_output_file_size_ = builder_->EstimatedFileSize();
