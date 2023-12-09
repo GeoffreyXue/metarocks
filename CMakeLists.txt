@@ -658,6 +658,7 @@ set(SOURCES
         db/compaction/compaction_picker_fifo.cc
         db/compaction/compaction_picker_level.cc
         db/compaction/compaction_picker_universal.cc
+        db/compaction/compaction_service.cc
         db/compaction/compaction_service_job.cc
         db/compaction/compaction_state.cc
         db/compaction/compaction_outputs.cc
@@ -1284,6 +1285,7 @@ if(WITH_TESTS)
         db/compaction/compaction_job_test.cc
         db/compaction/compaction_iterator_test.cc
         db/compaction/compaction_picker_test.cc
+        db/compaction/compaction_remote_test.cc
         db/compaction/compaction_service_test.cc
         db/compaction/tiered_compaction_test.cc
         db/comparator_db_test.cc
