@@ -1,0 +1,4 @@
+[submodule "metaarrow"]
+	path = metaarrow
+	url = https://github.com/GeoffreyXue/metaarrow.git
+	branch = dev
