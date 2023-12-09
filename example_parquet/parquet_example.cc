@@ -41,15 +41,17 @@ int main() {
 
 
   for (int i = 1; i < 10000; ++i) {
-    db->Put(rocksdb::WriteOptions(), std::to_string(i),
-            std::string(500, 'a' + (i % 26)));
+    std::string value = "{\"hello\":" + std::to_string(i) + ", \"world\":\"" + std::string(500, 'a' + (i % 26)) + "\"}";
+    db->Put(rocksdb::WriteOptions(), std::to_string(i), value);
   }
 
   // verify the values are still there
   std::string value;
   for (int i = 1; i < 10000; ++i) {
     db->Get(rocksdb::ReadOptions(), std::to_string(i), &value);
-    assert(value == std::string(500, 'a' + (i % 26)));
+    std::string val(500, 'a' + (i % 26));
+    std::string original = "{\"hello\":" + std::to_string(i) + ", \"world\": " + std::string(500, 'a' + (i % 26)) + "}";
+    assert(value == original);
   }
 
   // close the db.
