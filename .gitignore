@@ -1,6 +1,6 @@
 rocksdb.pc
 
-*.a
+librocksdb_debug.a
 *.arc
 *.d
 *.dylib*
