@@ -10,7 +10,6 @@
 #include <unordered_map>
 #include <vector>
 
-#include "monitoring/instrumented_mutex.h"
 #include "rocksdb/advanced_options.h"
 #include "rocksdb/compaction_filter.h"
 #include "rocksdb/comparator.h"
@@ -180,7 +179,7 @@ class ExternalCompactionService : public CompactionService {
   ~ExternalCompactionService() override;
 
  private:
-  InstrumentedMutex mutex_;
+  std::mutex mutex_;
   std::atomic_int compaction_num_{0};
   std::map<uint64_t, std::string> jobs_;
   const std::string db_path_;

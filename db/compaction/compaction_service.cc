@@ -11,7 +11,7 @@ namespace ROCKSDB_NAMESPACE {
 CompactionServiceJobStatus ExternalCompactionService::StartV2(
     const CompactionServiceJobInfo& info,
     const std::string& compaction_service_input) {
-  InstrumentedMutexLock l(&mutex_);
+  std::scoped_lock lock(mutex_);
   start_info_ = info;
   assert(info.db_name == db_path_);
   jobs_.emplace(info.job_id, compaction_service_input);
@@ -38,7 +38,7 @@ CompactionServiceJobStatus ExternalCompactionService::WaitForCompleteV2(
   std::string compaction_input;
   assert(info.db_name == db_path_);
   {
-    InstrumentedMutexLock l(&mutex_);
+    std::scoped_lock lock(mutex_);
     wait_info_ = info;
     auto i = jobs_.find(info.job_id);
     if (i == jobs_.end()) {
