@@ -277,7 +277,7 @@ if [ "$CROSS_COMPILE" = "true" -o "$FBCODE_BUILD" = "true" ]; then
 else
     # Force inclusion of arrow for flags
     COMMON_FLAGS="$COMMON_FLAGS -DARROW -DPARQUET"
-    PLATFORM_LDFLAGS="$PLATFORM_LDFLAGS -larrow -lparquet"
+    PLATFORM_LDFLAGS="$PLATFORM_LDFLAGS -larrow -lparquet -L/workspaces/metarocks"
     JAVA_LDFLAGS="$JAVA_LDFLAGS -larrow -lparquet"
 
     if ! test $ROCKSDB_DISABLE_FALLOCATE; then
