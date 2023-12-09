@@ -1,7 +1,6 @@
 #include <iostream>
 
-#include "db/compaction/compaction.h"
-#include "db/compaction/compaction_job.h"
+#include "rocksdb/db.h"
 #include "rocksdb/compaction_service.h"
 #include "rocksdb/options.h"
 #include "rocksdb/slice.h"
