@@ -4,6 +4,7 @@
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
 
+#include <iostream>
 #include <thread>
 
 namespace ROCKSDB_NAMESPACE {
@@ -12,13 +13,21 @@ CompactionServiceJobStatus ExternalCompactionService::StartV2(
     const CompactionServiceJobInfo& info,
     const std::string& compaction_service_input) {
   std::scoped_lock lock(mutex_);
+
+  // Add to queue
   start_info_ = info;
   assert(info.db_name == db_path_);
   jobs_.emplace(info.job_id, compaction_service_input);
+
+  // PRint dbug
+  std::cout << "StartV2: " << info.job_id << " " << compaction_service_input << std::endl;
+
+  // Decide if queue add successful
   CompactionServiceJobStatus s = CompactionServiceJobStatus::kSuccess;
   if (is_override_start_status_) {
-    return override_start_status_;
+    return override_start_status_; // if testing failure, inject failure
   }
+
   return s;
 }
 

@@ -58,6 +58,15 @@ static void PrintSSTableCounts(DB* db) {
   cout << endl;
 }
 
+void PrintCompactionCount(ExternalCompactionService* cs) {
+  cout << "Compaction Count: " << cs->GetCompactionNum() << endl;
+}
+
+void PrintStatus(DB* db, ExternalCompactionService* cs) {
+  PrintSSTableCounts(db);
+  PrintCompactionCount(cs);
+}
+
 int main(int argc, char** argv) {
   cout << "Remote Compaction Demo." << endl;
 
@@ -73,7 +82,6 @@ int main(int argc, char** argv) {
     options.env = env;
     options.create_if_missing = true;
     options.fail_if_options_file_error = true;
-    options.disable_auto_compactions = true;  // do not compact on client
     // options.compaction_service will be set later
     primary_options = options;
   }
@@ -116,29 +124,12 @@ int main(int argc, char** argv) {
 
   assert(cs->GetCompactionNum() == 0);
 
-  // Write some values
 
   Status s = DB::Open(primary_options, kDBPath, &db);
   assert(s.ok());
 
-  // TEST: Write then read a key-value pair
-  cout << "TEST: write-read one value" << endl;
+  PrintStatus(db, cs);
 
-  s = db->Put(WriteOptions(), "key1", "value1");
-  assert(s.ok());
-  {
-    string value;
-    s = db->Get(ReadOptions(), "key1", &value);
-    assert(s.ok());
-
-    assert(value == "value1");
-  }
-
-  PrintSSTableCounts(db);
-
-  // TEST: Time to write lots of values
-
-  cout << "TEST: insert many values x10" << endl;
 
   const int BATCH_SIZE = 100000;
   const int BATCHES = 5;
@@ -159,10 +150,9 @@ int main(int argc, char** argv) {
     chrono::duration<double> diff = end - start;
     cout << "Time: " << diff.count() << " s" << endl;
 
-    PrintSSTableCounts(db);
+    PrintStatus(db, cs);
   }
 
-  // SETUP: insert some test values to look for later
   cout << "Inserting some more values" << endl;
 
   for (int i = 0; i < 20; i++) {
@@ -196,23 +186,17 @@ int main(int argc, char** argv) {
       assert(result == "value_new" + to_string(i));
     }
   }
+  
+  PrintStatus(db, cs);
 
-  // Perform compaction
-
-  PrintSSTableCounts(db);
-
-  auto num = cs->GetCompactionNum();
-
-  cout << "Performing compaction " << num << endl;
+  cout << "Manual compaction " << cs->GetCompactionNum() << endl;
 
   CompactRangeOptions coptions;
   db->CompactRange(coptions, nullptr,
                    nullptr);  // compact whole database, b/c nullptr is both
                               // first and last record
 
-  num = cs->GetCompactionNum();
-
-  cout << "Compaction complete, now count is " << num << endl;
+  cout << "Compaction complete, now count is " << cs->GetCompactionNum() << endl;
 
   PrintSSTableCounts(db);
 
