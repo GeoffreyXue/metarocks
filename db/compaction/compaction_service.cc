@@ -79,7 +79,7 @@ CompactionServiceJobStatus ExternalCompactionService::WaitForCompleteV2(
 
   Status s;
   {
-    const rocksdb::OpenAndCompactOptions oac_options;
+    // const rocksdb::OpenAndCompactOptions options;
     const std::string name = db_path_;
     const std::string output_directory = db_path_ + "/" + std::to_string(info.job_id);
     const std::string input = compaction_input;
@@ -90,7 +90,7 @@ CompactionServiceJobStatus ExternalCompactionService::WaitForCompleteV2(
       options, name, output_directory,
       input, output, override_options);*/
 
-    std::thread t(OpenAndCompactInThread, oac_options, name, output_directory, input, output, override_options, &s);
+    std::thread t(OpenAndCompactInThread, options, name, output_directory, input, output, override_options, &s);
     t.join();
   }
 
