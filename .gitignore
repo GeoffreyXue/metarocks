@@ -1,6 +1,6 @@
 rocksdb.pc
 
-librocksdb_debug.a
+*.a
 *.arc
 *.d
 *.dylib*
@@ -28,6 +28,7 @@ librocksdb_debug.a
 .watchmanconfig
 CMakeCache.txt
 CMakeFiles/
+make_config.mk
 build/
 
 ldb
