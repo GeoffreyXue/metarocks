@@ -100,3 +100,4 @@ third-party/folly/
 *.sublime-*
 
 aws-sdk-cpp/
+metaarrow/
