@@ -57,7 +57,7 @@ RUN cd ~/benchmark && mkdir build && cd build && cmake .. -GNinja -DCMAKE_BUILD_
 RUN apt-get install -y build-essential
 
 RUN git clone --depth 1 -b dev https://github.com/GeoffreyXue/metaarrow.git ~/arrow
-RUN cd ~/arrow/cpp && mkdir build && cd build && cmake .. -DARROW_PARQUET=ON -DARROW_JSON=ON -GNinja && \
+RUN cd ~/arrow/cpp && mkdir build && cd build && cmake .. -DARROW_PARQUET=ON -DARROW_JSON=ON -DARROW_BUILD_STATIC=ON -GNinja && \
     ninja -j8 && ninja install
 
 # clean up
