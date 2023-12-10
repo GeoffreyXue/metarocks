@@ -275,10 +275,8 @@ if [ "$CROSS_COMPILE" = "true" -o "$FBCODE_BUILD" = "true" ]; then
     fi
     true
 else
-    # Force inclusion of arrow for flags
-    COMMON_FLAGS="$COMMON_FLAGS -DARROW -DPARQUET"
-    PLATFORM_LDFLAGS="$PLATFORM_LDFLAGS -larrow -lparquet -L/workspaces/metarocks"
-    JAVA_LDFLAGS="$JAVA_LDFLAGS -larrow -lparquet"
+    # Force inclusion of arrow and parquet
+    PLATFORM_LDFLAGS="$PLATFORM_LDFLAGS /usr/local/lib/libarrow.a /usr/local/lib/libparquet.a /usr/local/lib/libarrow_bundled_dependencies.a -I/usr/local/include"
 
     if ! test $ROCKSDB_DISABLE_FALLOCATE; then
         # Test whether fallocate is available
