@@ -98,3 +98,5 @@ cmake-build-*
 third-party/folly/
 .cache
 *.sublime-*
+
+aws-sdk-cpp/
