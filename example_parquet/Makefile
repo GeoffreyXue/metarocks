@@ -26,4 +26,4 @@ clean:
 	rm -rf ./parquet_example
 
 librocksdb:
-	cd .. && $(MAKE) static_lib -j 6
+	cd .. && $(MAKE) static_lib
