@@ -5,7 +5,8 @@
         "type": "shell",
         "command": "make",
         "args": [
-          "parquet_example"
+          "parquet_example",
+          "-j8"
         ],
         "options": {
           "cwd": "${workspaceFolder}/example_parquet"

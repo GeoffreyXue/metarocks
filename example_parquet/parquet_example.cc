@@ -51,8 +51,7 @@ int main() {
   std::string value;
   for (int i = 1; i < 10000; ++i) {
     db->Get(rocksdb::ReadOptions(), std::to_string(i), &value);
-    std::string val(500, 'a' + (i % 26));
-    std::string original = "{\"hello\":" + std::to_string(i) + ",\"world\": " + std::string(500, 'a' + (i % 26)) + "}";
+    std::string original = "{\"hello\":" + std::to_string(i) + ",\"world\":\"" + std::string(500, 'a' + (i % 26)) + "\"}";
     assert(value == original);
   }
 
