@@ -5,10 +5,10 @@
         "name": "Debug RocksDB",
         "type": "cppdbg",
         "request": "launch",
-        "program": "${workspaceFolder}/example_parquet/parquet_example",
+        "program": "${workspaceFolder}/build/example_parquet/parquet_example",
         "args": [],
         "stopAtEntry": false,
-        "cwd": "${workspaceFolder}/example_parquet",
+        "cwd": "${workspaceFolder}/build/example_parquet",
         "environment": [],
         "MIMode": "gdb",
         "miDebuggerPath": "/usr/bin/gdb",
@@ -19,7 +19,7 @@
                 "ignoreFailures": true
             }
         ],
-        "preLaunchTask": "build"
+        "preLaunchTask": "build-ninja"
       }
     ]
   }

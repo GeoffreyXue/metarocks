@@ -1,17 +1,59 @@
 {
-    "tasks": [
-      {
-        "label": "build",
-        "type": "shell",
-        "command": "make",
-        "args": [
-          "parquet_example",
-          "-j8"
-        ],
-        "options": {
-          "cwd": "${workspaceFolder}/example_parquet"
-        }
+  "tasks": [
+    {
+      "label": "create-build-folder",
+      "type": "shell",
+      "command": "mkdir",
+      "args": ["-p", "${workspaceFolder}/build"],
+      "group": {
+        "kind": "build",
+        "isDefault": true
       }
-    ],
-    "version": "2.0.0"
-  }
+    },
+    {
+      "label": "configure-cmake",
+      "type": "shell",
+      "command": "cmake",
+      "args": [
+        "..",
+        "-DCMAKE_PREFIX_PATH=/usr/local/",
+        "-DCMAKE_BUILD_TYPE=Debug",
+        "-DCMAKE_EXPORT_COMPILE_COMMANDS=ON",
+        "-DWITH_PARQUET_EXAMPLE=ON",
+        "-DROCKSDB_BUILD_SHARED=OFF",
+        "-DWITH_TESTS=OFF",
+        "-DWITH_ALL_TESTS=OFF",
+        "-DWITH_TOOLS=OFF",
+        "-DWITH_BENCHMARK_TOOLS=OFF",
+        "-DWITH_CORE_TOOLS=OFF",
+        "-DWITH_TRACE_TOOLS=OFF",
+        "-GNinja"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": ["create-build-folder"]
+    },
+    {
+      "label": "build-ninja",
+      "type": "shell",
+      "command": "ninja",
+      "args": [
+        "-j8"
+      ],
+      "options": {
+        "cwd": "${workspaceFolder}/build"
+      },
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "dependsOn": ["configure-cmake"]
+    }
+  ],
+  "version": "2.0.0"
+}
