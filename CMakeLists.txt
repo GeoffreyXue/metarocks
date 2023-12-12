@@ -779,6 +779,7 @@ set(SOURCES
         options/options.cc
         options/options_helper.cc
         options/options_parser.cc
+        parquet/parquet_writer.cc
         port/mmap.cc
         port/stack_trace.cc
         table/adaptive/adaptive_table_factory.cc
