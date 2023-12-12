@@ -1116,8 +1116,8 @@ target_link_libraries(${ROCKSDB_STATIC_LIB} PRIVATE
 
 if(ROCKSDB_BUILD_SHARED)
   add_library(${ROCKSDB_SHARED_LIB} SHARED ${SOURCES} ${BUILD_VERSION_CC})
-  target_link_libraries(${ROCKSDB_SHARED_LIB} PRIVATE
-    ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
+  target_link_libraries(${ROCKSDB_SHARED_LIB} PRIVATE aws-cpp-sdk-core aws-cpp-sdk-sqs)
+  target_link_libraries(${ROCKSDB_SHARED_LIB} PRIVATE ${THIRDPARTY_LIBS} ${SYSTEM_LIBS})
 
   if(WIN32)
     set_target_properties(${ROCKSDB_SHARED_LIB} PROPERTIES
