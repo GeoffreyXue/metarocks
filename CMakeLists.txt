@@ -1597,6 +1597,11 @@ if(WITH_EXAMPLES)
   add_subdirectory(examples)
 endif()
 
+option(WITH_PARQUET_EXAMPLE "build with parquet writing example" OFF)
+if(WITH_PARQUET_EXAMPLE)
+  add_subdirectory(example_parquet)
+endif()
+
 option(WITH_BENCHMARK "build benchmark tests" OFF)
 if(WITH_BENCHMARK)
   add_subdirectory(${PROJECT_SOURCE_DIR}/microbench/)
