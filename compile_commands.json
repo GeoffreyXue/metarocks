@@ -34,7 +34,7 @@
             "-DHAVE_UINT128_EXTENSION",
             "parquet_example.cc"
         ],
-        "directory": "/workspaces/metarocks/example_parquet",
+        "directory": "/home/ubuntu/compaction-server/rocksdb/example_parquet",
         "file": "parquet_example.cc"
     },
     {
@@ -90,7 +90,7 @@
             "db/manual_compaction_test.o",
             "db/manual_compaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/manual_compaction_test.cc"
     },
     {
@@ -146,7 +146,7 @@
             "utilities/merge_operators/max.o",
             "utilities/merge_operators/max.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/merge_operators/max.cc"
     },
     {
@@ -202,7 +202,7 @@
             "utilities/transactions/transaction_base.o",
             "utilities/transactions/transaction_base.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/transaction_base.cc"
     },
     {
@@ -258,7 +258,7 @@
             "memtable/inlineskiplist_test.o",
             "memtable/inlineskiplist_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/inlineskiplist_test.cc"
     },
     {
@@ -314,7 +314,7 @@
             "table/block_based/block_cache.o",
             "table/block_based/block_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_cache.cc"
     },
     {
@@ -370,7 +370,7 @@
             "options/options.o",
             "options/options.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/options.cc"
     },
     {
@@ -426,7 +426,7 @@
             "tools/reduce_levels_test.o",
             "tools/reduce_levels_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/reduce_levels_test.cc"
     },
     {
@@ -482,7 +482,7 @@
             "utilities/counted_fs.o",
             "utilities/counted_fs.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/counted_fs.cc"
     },
     {
@@ -538,7 +538,7 @@
             "db/wide/db_wide_basic_test.o",
             "db/wide/db_wide_basic_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/wide/db_wide_basic_test.cc"
     },
     {
@@ -594,7 +594,7 @@
             "db/db_impl/db_impl_debug.o",
             "db/db_impl/db_impl_debug.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/db_impl_debug.cc"
     },
     {
@@ -650,7 +650,7 @@
             "utilities/option_change_migration/option_change_migration.o",
             "utilities/option_change_migration/option_change_migration.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/option_change_migration/option_change_migration.cc"
     },
     {
@@ -706,7 +706,7 @@
             "memory/memkind_kmem_allocator.o",
             "memory/memkind_kmem_allocator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memory/memkind_kmem_allocator.cc"
     },
     {
@@ -762,7 +762,7 @@
             "util/file_checksum_helper.o",
             "util/file_checksum_helper.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/file_checksum_helper.cc"
     },
     {
@@ -818,7 +818,7 @@
             "util/status.o",
             "util/status.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/status.cc"
     },
     {
@@ -874,7 +874,7 @@
             "db/db_impl/db_impl_open.o",
             "db/db_impl/db_impl_open.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/db_impl_open.cc"
     },
     {
@@ -930,7 +930,7 @@
             "db/arena_wrapped_db_iter.o",
             "db/arena_wrapped_db_iter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/arena_wrapped_db_iter.cc"
     },
     {
@@ -986,7 +986,7 @@
             "monitoring/thread_status_util_debug.o",
             "monitoring/thread_status_util_debug.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/thread_status_util_debug.cc"
     },
     {
@@ -1042,7 +1042,7 @@
             "table/block_based/block_test.o",
             "table/block_based/block_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_test.cc"
     },
     {
@@ -1098,7 +1098,7 @@
             "table/table_factory.o",
             "table/table_factory.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/table_factory.cc"
     },
     {
@@ -1154,7 +1154,7 @@
             "db/blob/db_blob_index_test.o",
             "db/blob/db_blob_index_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/db_blob_index_test.cc"
     },
     {
@@ -1210,7 +1210,7 @@
             "memtable/alloc_tracker.o",
             "memtable/alloc_tracker.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/alloc_tracker.cc"
     },
     {
@@ -1266,7 +1266,7 @@
             "port/win/win_thread.o",
             "port/win/win_thread.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "port/win/win_thread.cc"
     },
     {
@@ -1322,7 +1322,7 @@
             "db/prefix_test.o",
             "db/prefix_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/prefix_test.cc"
     },
     {
@@ -1378,7 +1378,7 @@
             "db_stress_tool/db_stress_stat.o",
             "db_stress_tool/db_stress_stat.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress_stat.cc"
     },
     {
@@ -1434,7 +1434,7 @@
             "util/autovector_test.o",
             "util/autovector_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/autovector_test.cc"
     },
     {
@@ -1490,7 +1490,7 @@
             "db/db_wal_test.o",
             "db/db_wal_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_wal_test.cc"
     },
     {
@@ -1546,7 +1546,7 @@
             "table/cuckoo/cuckoo_table_builder_test.o",
             "table/cuckoo/cuckoo_table_builder_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/cuckoo/cuckoo_table_builder_test.cc"
     },
     {
@@ -1602,7 +1602,7 @@
             "db/range_tombstone_fragmenter.o",
             "db/range_tombstone_fragmenter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/range_tombstone_fragmenter.cc"
     },
     {
@@ -1658,7 +1658,7 @@
             "file/sequence_file_reader.o",
             "file/sequence_file_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/sequence_file_reader.cc"
     },
     {
@@ -1714,7 +1714,7 @@
             "db/blob/blob_counting_iterator_test.o",
             "db/blob/blob_counting_iterator_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_counting_iterator_test.cc"
     },
     {
@@ -1770,7 +1770,7 @@
             "db/wide/wide_column_serialization_test.o",
             "db/wide/wide_column_serialization_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/wide/wide_column_serialization_test.cc"
     },
     {
@@ -1826,7 +1826,7 @@
             "db/db_properties_test.o",
             "db/db_properties_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_properties_test.cc"
     },
     {
@@ -1882,7 +1882,7 @@
             "env/env_posix.o",
             "env/env_posix.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/env_posix.cc"
     },
     {
@@ -1938,7 +1938,7 @@
             "db/log_reader.o",
             "db/log_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/log_reader.cc"
     },
     {
@@ -1994,7 +1994,7 @@
             "table/plain/plain_table_factory.o",
             "table/plain/plain_table_factory.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/plain/plain_table_factory.cc"
     },
     {
@@ -2050,7 +2050,7 @@
             "utilities/merge_operators/bytesxor.o",
             "utilities/merge_operators/bytesxor.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/merge_operators/bytesxor.cc"
     },
     {
@@ -2106,7 +2106,7 @@
             "db/version_edit.o",
             "db/version_edit.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/version_edit.cc"
     },
     {
@@ -2162,7 +2162,7 @@
             "db/db_merge_operator_test.o",
             "db/db_merge_operator_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_merge_operator_test.cc"
     },
     {
@@ -2218,7 +2218,7 @@
             "db/file_indexer.o",
             "db/file_indexer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/file_indexer.cc"
     },
     {
@@ -2274,7 +2274,7 @@
             "utilities/transactions/lock/point/point_lock_tracker.o",
             "utilities/transactions/lock/point/point_lock_tracker.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/point/point_lock_tracker.cc"
     },
     {
@@ -2330,7 +2330,7 @@
             "table/unique_id.o",
             "table/unique_id.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/unique_id.cc"
     },
     {
@@ -2386,7 +2386,7 @@
             "memtable/skiplist_test.o",
             "memtable/skiplist_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/skiplist_test.cc"
     },
     {
@@ -2442,7 +2442,7 @@
             "table/block_based/index_builder.o",
             "table/block_based/index_builder.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/index_builder.cc"
     },
     {
@@ -2498,7 +2498,7 @@
             "table/block_based/full_filter_block.o",
             "table/block_based/full_filter_block.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/full_filter_block.cc"
     },
     {
@@ -2554,7 +2554,7 @@
             "db/blob/blob_contents.o",
             "db/blob/blob_contents.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_contents.cc"
     },
     {
@@ -2610,7 +2610,7 @@
             "memory/arena_test.o",
             "memory/arena_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memory/arena_test.cc"
     },
     {
@@ -2666,7 +2666,7 @@
             "util/compression_context_cache.o",
             "util/compression_context_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/compression_context_cache.cc"
     },
     {
@@ -2722,7 +2722,7 @@
             "utilities/simulator_cache/cache_simulator_test.o",
             "utilities/simulator_cache/cache_simulator_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/simulator_cache/cache_simulator_test.cc"
     },
     {
@@ -2778,7 +2778,7 @@
             "utilities/transactions/lock/range/range_locking_test.o",
             "utilities/transactions/lock/range/range_locking_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_locking_test.cc"
     },
     {
@@ -2827,7 +2827,7 @@
             "db/c_test.o",
             "db/c_test.c"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/c_test.c"
     },
     {
@@ -2883,7 +2883,7 @@
             "util/slice_test.o",
             "util/slice_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/slice_test.cc"
     },
     {
@@ -2939,7 +2939,7 @@
             "utilities/transactions/transaction_db_mutex_impl.o",
             "utilities/transactions/transaction_db_mutex_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/transaction_db_mutex_impl.cc"
     },
     {
@@ -2995,7 +2995,7 @@
             "env/fs_remap.o",
             "env/fs_remap.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/fs_remap.cc"
     },
     {
@@ -3051,7 +3051,7 @@
             "db/compaction/tiered_compaction_test.o",
             "db/compaction/tiered_compaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/tiered_compaction_test.cc"
     },
     {
@@ -3107,7 +3107,7 @@
             "db/write_batch.o",
             "db/write_batch.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/write_batch.cc"
     },
     {
@@ -3163,7 +3163,7 @@
             "db/builder.o",
             "db/builder.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/builder.cc"
     },
     {
@@ -3219,7 +3219,7 @@
             "utilities/persistent_cache/persistent_cache_bench.o",
             "utilities/persistent_cache/persistent_cache_bench.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/persistent_cache/persistent_cache_bench.cc"
     },
     {
@@ -3275,7 +3275,7 @@
             "db/internal_stats.o",
             "db/internal_stats.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/internal_stats.cc"
     },
     {
@@ -3331,7 +3331,7 @@
             "utilities/cassandra/format.o",
             "utilities/cassandra/format.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cassandra/format.cc"
     },
     {
@@ -3387,7 +3387,7 @@
             "util/build_version.o",
             "util/build_version.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/build_version.cc"
     },
     {
@@ -3443,7 +3443,7 @@
             "db/blob/db_blob_compaction_test.o",
             "db/blob/db_blob_compaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/db_blob_compaction_test.cc"
     },
     {
@@ -3499,7 +3499,7 @@
             "util/thread_local_test.o",
             "util/thread_local_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/thread_local_test.cc"
     },
     {
@@ -3555,7 +3555,7 @@
             "tools/db_repl_stress.o",
             "tools/db_repl_stress.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/db_repl_stress.cc"
     },
     {
@@ -3611,7 +3611,7 @@
             "trace_replay/trace_record_handler.o",
             "trace_replay/trace_record_handler.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "trace_replay/trace_record_handler.cc"
     },
     {
@@ -3667,7 +3667,7 @@
             "db/log_writer.o",
             "db/log_writer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/log_writer.cc"
     },
     {
@@ -3723,7 +3723,7 @@
             "db/range_tombstone_fragmenter_test.o",
             "db/range_tombstone_fragmenter_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/range_tombstone_fragmenter_test.cc"
     },
     {
@@ -3779,7 +3779,7 @@
             "db/column_family_test.o",
             "db/column_family_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/column_family_test.cc"
     },
     {
@@ -3835,7 +3835,7 @@
             "trace_replay/block_cache_tracer_test.o",
             "trace_replay/block_cache_tracer_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "trace_replay/block_cache_tracer_test.cc"
     },
     {
@@ -3891,7 +3891,7 @@
             "utilities/blob_db/blob_db_impl.o",
             "utilities/blob_db/blob_db_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/blob_db/blob_db_impl.cc"
     },
     {
@@ -3947,7 +3947,7 @@
             "db/transaction_log_impl.o",
             "db/transaction_log_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/transaction_log_impl.cc"
     },
     {
@@ -4003,7 +4003,7 @@
             "table/block_based/data_block_footer.o",
             "table/block_based/data_block_footer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/data_block_footer.cc"
     },
     {
@@ -4059,7 +4059,7 @@
             "db/error_handler.o",
             "db/error_handler.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/error_handler.cc"
     },
     {
@@ -4115,7 +4115,7 @@
             "util/hash.o",
             "util/hash.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/hash.cc"
     },
     {
@@ -4171,7 +4171,7 @@
             "utilities/blob_db/blob_db_impl_filesnapshot.o",
             "utilities/blob_db/blob_db_impl_filesnapshot.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/blob_db/blob_db_impl_filesnapshot.cc"
     },
     {
@@ -4227,7 +4227,7 @@
             "db/db_impl/db_impl_secondary.o",
             "db/db_impl/db_impl_secondary.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/db_impl_secondary.cc"
     },
     {
@@ -4283,7 +4283,7 @@
             "db/malloc_stats.o",
             "db/malloc_stats.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/malloc_stats.cc"
     },
     {
@@ -4339,7 +4339,7 @@
             "test_util/testutil_test.o",
             "test_util/testutil_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "test_util/testutil_test.cc"
     },
     {
@@ -4395,7 +4395,7 @@
             "util/slice.o",
             "util/slice.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/slice.cc"
     },
     {
@@ -4451,7 +4451,7 @@
             "db/compaction/compaction_iterator.o",
             "db/compaction/compaction_iterator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_iterator.cc"
     },
     {
@@ -4507,7 +4507,7 @@
             "utilities/blob_db/blob_file.o",
             "utilities/blob_db/blob_file.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/blob_db/blob_file.cc"
     },
     {
@@ -4563,7 +4563,7 @@
             "db/db_with_timestamp_basic_test.o",
             "db/db_with_timestamp_basic_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_with_timestamp_basic_test.cc"
     },
     {
@@ -4619,7 +4619,7 @@
             "table/block_based/partitioned_filter_block_test.o",
             "table/block_based/partitioned_filter_block_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/partitioned_filter_block_test.cc"
     },
     {
@@ -4675,7 +4675,7 @@
             "util/async_file_reader.o",
             "util/async_file_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/async_file_reader.cc"
     },
     {
@@ -4731,7 +4731,7 @@
             "util/string_util.o",
             "util/string_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/string_util.cc"
     },
     {
@@ -4787,7 +4787,7 @@
             "db/db_sst_test.o",
             "db/db_sst_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_sst_test.cc"
     },
     {
@@ -4843,7 +4843,7 @@
             "tools/sst_dump.o",
             "tools/sst_dump.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/sst_dump.cc"
     },
     {
@@ -4899,7 +4899,7 @@
             "utilities/backup/backup_engine_test.o",
             "utilities/backup/backup_engine_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/backup/backup_engine_test.cc"
     },
     {
@@ -4955,7 +4955,7 @@
             "db/blob/blob_source.o",
             "db/blob/blob_source.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_source.cc"
     },
     {
@@ -5011,7 +5011,7 @@
             "tools/block_cache_analyzer/block_cache_trace_analyzer_test.o",
             "tools/block_cache_analyzer/block_cache_trace_analyzer_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/block_cache_analyzer/block_cache_trace_analyzer_test.cc"
     },
     {
@@ -5067,7 +5067,7 @@
             "utilities/leveldb_options/leveldb_options.o",
             "utilities/leveldb_options/leveldb_options.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/leveldb_options/leveldb_options.cc"
     },
     {
@@ -5123,7 +5123,7 @@
             "db/db_options_test.o",
             "db/db_options_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_options_test.cc"
     },
     {
@@ -5179,7 +5179,7 @@
             "utilities/env_timed_test.o",
             "utilities/env_timed_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/env_timed_test.cc"
     },
     {
@@ -5235,7 +5235,7 @@
             "monitoring/perf_context.o",
             "monitoring/perf_context.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/perf_context.cc"
     },
     {
@@ -5291,7 +5291,7 @@
             "utilities/checkpoint/checkpoint_test.o",
             "utilities/checkpoint/checkpoint_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/checkpoint/checkpoint_test.cc"
     },
     {
@@ -5347,7 +5347,7 @@
             "table/block_based/reader_common.o",
             "table/block_based/reader_common.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/reader_common.cc"
     },
     {
@@ -5403,7 +5403,7 @@
             "cache/cache_reservation_manager.o",
             "cache/cache_reservation_manager.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/cache_reservation_manager.cc"
     },
     {
@@ -5459,7 +5459,7 @@
             "table/block_based/block_based_table_builder.o",
             "table/block_based/block_based_table_builder.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_based_table_builder.cc"
     },
     {
@@ -5515,7 +5515,7 @@
             "db/merge_test.o",
             "db/merge_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/merge_test.cc"
     },
     {
@@ -5571,7 +5571,7 @@
             "table/block_based/full_filter_block_test.o",
             "table/block_based/full_filter_block_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/full_filter_block_test.cc"
     },
     {
@@ -5627,7 +5627,7 @@
             "db/db_impl/db_impl_compaction_flush.o",
             "db/db_impl/db_impl_compaction_flush.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/db_impl_compaction_flush.cc"
     },
     {
@@ -5683,7 +5683,7 @@
             "db/output_validator.o",
             "db/output_validator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/output_validator.cc"
     },
     {
@@ -5739,7 +5739,7 @@
             "env/env_encryption.o",
             "env/env_encryption.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/env_encryption.cc"
     },
     {
@@ -5795,7 +5795,7 @@
             "memtable/skiplistrep.o",
             "memtable/skiplistrep.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/skiplistrep.cc"
     },
     {
@@ -5851,7 +5851,7 @@
             "port/port_posix.o",
             "port/port_posix.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "port/port_posix.cc"
     },
     {
@@ -5907,7 +5907,7 @@
             "table/block_based/block.o",
             "table/block_based/block.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block.cc"
     },
     {
@@ -5963,7 +5963,7 @@
             "tools/sst_dump_test.o",
             "tools/sst_dump_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/sst_dump_test.cc"
     },
     {
@@ -6019,7 +6019,7 @@
             "options/cf_options.o",
             "options/cf_options.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/cf_options.cc"
     },
     {
@@ -6075,7 +6075,7 @@
             "db/periodic_task_scheduler.o",
             "db/periodic_task_scheduler.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/periodic_task_scheduler.cc"
     },
     {
@@ -6131,7 +6131,7 @@
             "utilities/transactions/lock/lock_manager.o",
             "utilities/transactions/lock/lock_manager.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/lock_manager.cc"
     },
     {
@@ -6187,7 +6187,7 @@
             "db/memtable_list.o",
             "db/memtable_list.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/memtable_list.cc"
     },
     {
@@ -6243,7 +6243,7 @@
             "table/block_fetcher_test.o",
             "table/block_fetcher_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_fetcher_test.cc"
     },
     {
@@ -6299,7 +6299,7 @@
             "db/merge_helper_test.o",
             "db/merge_helper_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/merge_helper_test.cc"
     },
     {
@@ -6355,7 +6355,7 @@
             "util/hash_test.o",
             "util/hash_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/hash_test.cc"
     },
     {
@@ -6411,7 +6411,7 @@
             "table/block_based/index_reader_common.o",
             "table/block_based/index_reader_common.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/index_reader_common.cc"
     },
     {
@@ -6467,7 +6467,7 @@
             "options/options_parser.o",
             "options/options_parser.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/options_parser.cc"
     },
     {
@@ -6523,7 +6523,7 @@
             "util/ribbon_test.o",
             "util/ribbon_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/ribbon_test.cc"
     },
     {
@@ -6579,7 +6579,7 @@
             "utilities/cassandra/cassandra_row_merge_test.o",
             "utilities/cassandra/cassandra_row_merge_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cassandra/cassandra_row_merge_test.cc"
     },
     {
@@ -6635,7 +6635,7 @@
             "db/deletefile_test.o",
             "db/deletefile_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/deletefile_test.cc"
     },
     {
@@ -6691,7 +6691,7 @@
             "monitoring/histogram_windowing.o",
             "monitoring/histogram_windowing.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/histogram_windowing.cc"
     },
     {
@@ -6747,7 +6747,7 @@
             "db/compaction/compaction_picker.o",
             "db/compaction/compaction_picker.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_picker.cc"
     },
     {
@@ -6803,7 +6803,7 @@
             "tools/block_cache_analyzer/block_cache_trace_analyzer.o",
             "tools/block_cache_analyzer/block_cache_trace_analyzer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/block_cache_analyzer/block_cache_trace_analyzer.cc"
     },
     {
@@ -6859,7 +6859,7 @@
             "monitoring/iostats_context.o",
             "monitoring/iostats_context.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/iostats_context.cc"
     },
     {
@@ -6915,7 +6915,7 @@
             "util/udt_util_test.o",
             "util/udt_util_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/udt_util_test.cc"
     },
     {
@@ -6971,7 +6971,7 @@
             "db_stress_tool/no_batched_ops_stress.o",
             "db_stress_tool/no_batched_ops_stress.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/no_batched_ops_stress.cc"
     },
     {
@@ -7027,7 +7027,7 @@
             "db/memtable.o",
             "db/memtable.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/memtable.cc"
     },
     {
@@ -7083,7 +7083,7 @@
             "utilities/memory/memory_util.o",
             "utilities/memory/memory_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/memory/memory_util.cc"
     },
     {
@@ -7139,7 +7139,7 @@
             "utilities/simulator_cache/sim_cache_test.o",
             "utilities/simulator_cache/sim_cache_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/simulator_cache/sim_cache_test.cc"
     },
     {
@@ -7195,7 +7195,7 @@
             "utilities/table_properties_collectors/compact_on_deletion_collector.o",
             "utilities/table_properties_collectors/compact_on_deletion_collector.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/table_properties_collectors/compact_on_deletion_collector.cc"
     },
     {
@@ -7251,7 +7251,7 @@
             "db/db_memtable_test.o",
             "db/db_memtable_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_memtable_test.cc"
     },
     {
@@ -7307,7 +7307,7 @@
             "db/db_rate_limiter_test.o",
             "db/db_rate_limiter_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_rate_limiter_test.cc"
     },
     {
@@ -7363,7 +7363,7 @@
             "util/coding_test.o",
             "util/coding_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/coding_test.cc"
     },
     {
@@ -7419,7 +7419,7 @@
             "cache/tiered_secondary_cache_test.o",
             "cache/tiered_secondary_cache_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/tiered_secondary_cache_test.cc"
     },
     {
@@ -7475,7 +7475,7 @@
             "file/prefetch_test.o",
             "file/prefetch_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/prefetch_test.cc"
     },
     {
@@ -7531,7 +7531,7 @@
             "cache/secondary_cache_adapter.o",
             "cache/secondary_cache_adapter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/secondary_cache_adapter.cc"
     },
     {
@@ -7587,7 +7587,7 @@
             "db/corruption_test.o",
             "db/corruption_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/corruption_test.cc"
     },
     {
@@ -7643,7 +7643,7 @@
             "util/compression.o",
             "util/compression.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/compression.cc"
     },
     {
@@ -7699,7 +7699,7 @@
             "memtable/write_buffer_manager_test.o",
             "memtable/write_buffer_manager_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/write_buffer_manager_test.cc"
     },
     {
@@ -7755,7 +7755,7 @@
             "util/crc32c_arm64.o",
             "util/crc32c_arm64.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/crc32c_arm64.cc"
     },
     {
@@ -7811,7 +7811,7 @@
             "tools/simulated_hybrid_file_system.o",
             "tools/simulated_hybrid_file_system.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/simulated_hybrid_file_system.cc"
     },
     {
@@ -7867,7 +7867,7 @@
             "port/stack_trace.o",
             "port/stack_trace.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "port/stack_trace.cc"
     },
     {
@@ -7923,7 +7923,7 @@
             "utilities/transactions/lock/range/range_tree/lib/standalone_port.o",
             "utilities/transactions/lock/range/range_tree/lib/standalone_port.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/standalone_port.cc"
     },
     {
@@ -7979,7 +7979,7 @@
             "utilities/transactions/write_prepared_txn.o",
             "utilities/transactions/write_prepared_txn.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/write_prepared_txn.cc"
     },
     {
@@ -8035,7 +8035,7 @@
             "utilities/persistent_cache/persistent_cache_tier.o",
             "utilities/persistent_cache/persistent_cache_tier.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/persistent_cache/persistent_cache_tier.cc"
     },
     {
@@ -8091,7 +8091,7 @@
             "options/customizable_test.o",
             "options/customizable_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/customizable_test.cc"
     },
     {
@@ -8147,7 +8147,7 @@
             "utilities/trace/file_trace_reader_writer.o",
             "utilities/trace/file_trace_reader_writer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/trace/file_trace_reader_writer.cc"
     },
     {
@@ -8203,7 +8203,7 @@
             "cache/cache_key.o",
             "cache/cache_key.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/cache_key.cc"
     },
     {
@@ -8259,7 +8259,7 @@
             "db_stress_tool/db_stress.o",
             "db_stress_tool/db_stress.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress.cc"
     },
     {
@@ -8315,7 +8315,7 @@
             "monitoring/instrumented_mutex.o",
             "monitoring/instrumented_mutex.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/instrumented_mutex.cc"
     },
     {
@@ -8371,7 +8371,7 @@
             "db/db_range_del_test.o",
             "db/db_range_del_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_range_del_test.cc"
     },
     {
@@ -8427,7 +8427,7 @@
             "table/block_based/filter_block_reader_common.o",
             "table/block_based/filter_block_reader_common.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/filter_block_reader_common.cc"
     },
     {
@@ -8483,7 +8483,7 @@
             "util/defer_test.o",
             "util/defer_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/defer_test.cc"
     },
     {
@@ -8539,7 +8539,7 @@
             "db/external_sst_file_ingestion_job.o",
             "db/external_sst_file_ingestion_job.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/external_sst_file_ingestion_job.cc"
     },
     {
@@ -8595,7 +8595,7 @@
             "db/wal_manager.o",
             "db/wal_manager.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/wal_manager.cc"
     },
     {
@@ -8651,7 +8651,7 @@
             "utilities/blob_db/blob_compaction_filter.o",
             "utilities/blob_db/blob_compaction_filter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/blob_db/blob_compaction_filter.cc"
     },
     {
@@ -8707,7 +8707,7 @@
             "db/db_filesnapshot.o",
             "db/db_filesnapshot.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_filesnapshot.cc"
     },
     {
@@ -8763,7 +8763,7 @@
             "db/write_batch_test.o",
             "db/write_batch_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/write_batch_test.cc"
     },
     {
@@ -8819,7 +8819,7 @@
             "utilities/agg_merge/agg_merge_test.o",
             "utilities/agg_merge/agg_merge_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/agg_merge/agg_merge_test.cc"
     },
     {
@@ -8875,7 +8875,7 @@
             "db/db_logical_block_size_cache_test.o",
             "db/db_logical_block_size_cache_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_logical_block_size_cache_test.cc"
     },
     {
@@ -8931,7 +8931,7 @@
             "utilities/transactions/lock/range/range_tree/lib/locktree/wfg.o",
             "utilities/transactions/lock/range/range_tree/lib/locktree/wfg.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/locktree/wfg.cc"
     },
     {
@@ -8987,7 +8987,7 @@
             "table/two_level_iterator.o",
             "table/two_level_iterator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/two_level_iterator.cc"
     },
     {
@@ -9043,7 +9043,7 @@
             "db_stress_tool/db_stress_driver.o",
             "db_stress_tool/db_stress_driver.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress_driver.cc"
     },
     {
@@ -9099,7 +9099,7 @@
             "trace_replay/io_tracer.o",
             "trace_replay/io_tracer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "trace_replay/io_tracer.cc"
     },
     {
@@ -9155,7 +9155,7 @@
             "table/plain/plain_table_bloom.o",
             "table/plain/plain_table_bloom.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/plain/plain_table_bloom.cc"
     },
     {
@@ -9211,7 +9211,7 @@
             "utilities/persistent_cache/volatile_tier_impl.o",
             "utilities/persistent_cache/volatile_tier_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/persistent_cache/volatile_tier_impl.cc"
     },
     {
@@ -9267,7 +9267,7 @@
             "db/import_column_family_test.o",
             "db/import_column_family_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/import_column_family_test.cc"
     },
     {
@@ -9323,7 +9323,7 @@
             "db/db_impl/compacted_db_impl.o",
             "db/db_impl/compacted_db_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/compacted_db_impl.cc"
     },
     {
@@ -9379,7 +9379,7 @@
             "db/blob/blob_log_sequential_reader.o",
             "db/blob/blob_log_sequential_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_log_sequential_reader.cc"
     },
     {
@@ -9435,7 +9435,7 @@
             "util/slice_transform_test.o",
             "util/slice_transform_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/slice_transform_test.cc"
     },
     {
@@ -9491,7 +9491,7 @@
             "util/write_batch_util.o",
             "util/write_batch_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/write_batch_util.cc"
     },
     {
@@ -9547,7 +9547,7 @@
             "tools/trace_analyzer_test.o",
             "tools/trace_analyzer_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/trace_analyzer_test.cc"
     },
     {
@@ -9603,7 +9603,7 @@
             "util/murmurhash.o",
             "util/murmurhash.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/murmurhash.cc"
     },
     {
@@ -9659,7 +9659,7 @@
             "memtable/hash_skiplist_rep.o",
             "memtable/hash_skiplist_rep.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/hash_skiplist_rep.cc"
     },
     {
@@ -9715,7 +9715,7 @@
             "db/db_test_util.o",
             "db/db_test_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_test_util.cc"
     },
     {
@@ -9771,7 +9771,7 @@
             "env/env_basic_test.o",
             "env/env_basic_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/env_basic_test.cc"
     },
     {
@@ -9827,7 +9827,7 @@
             "db/flush_scheduler.o",
             "db/flush_scheduler.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/flush_scheduler.cc"
     },
     {
@@ -9883,7 +9883,7 @@
             "monitoring/histogram_test.o",
             "monitoring/histogram_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/histogram_test.cc"
     },
     {
@@ -9939,7 +9939,7 @@
             "db/compaction/compaction_picker_fifo.o",
             "db/compaction/compaction_picker_fifo.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_picker_fifo.cc"
     },
     {
@@ -9995,7 +9995,7 @@
             "utilities/fault_injection_env.o",
             "utilities/fault_injection_env.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/fault_injection_env.cc"
     },
     {
@@ -10051,7 +10051,7 @@
             "utilities/fault_injection_secondary_cache.o",
             "utilities/fault_injection_secondary_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/fault_injection_secondary_cache.cc"
     },
     {
@@ -10107,7 +10107,7 @@
             "test_util/transaction_test_util.o",
             "test_util/transaction_test_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "test_util/transaction_test_util.cc"
     },
     {
@@ -10163,7 +10163,7 @@
             "utilities/persistent_cache/hash_table_test.o",
             "utilities/persistent_cache/hash_table_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/persistent_cache/hash_table_test.cc"
     },
     {
@@ -10219,7 +10219,7 @@
             "db/range_del_aggregator_test.o",
             "db/range_del_aggregator_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/range_del_aggregator_test.cc"
     },
     {
@@ -10275,7 +10275,7 @@
             "db/version_builder_test.o",
             "db/version_builder_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/version_builder_test.cc"
     },
     {
@@ -10331,7 +10331,7 @@
             "db/column_family.o",
             "db/column_family.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/column_family.cc"
     },
     {
@@ -10387,7 +10387,7 @@
             "table/plain/plain_table_index.o",
             "table/plain/plain_table_index.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/plain/plain_table_index.cc"
     },
     {
@@ -10443,7 +10443,7 @@
             "db/compaction/compaction_job_stats_test.o",
             "db/compaction/compaction_job_stats_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_job_stats_test.cc"
     },
     {
@@ -10499,7 +10499,7 @@
             "tools/dump/rocksdb_undump.o",
             "tools/dump/rocksdb_undump.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/dump/rocksdb_undump.cc"
     },
     {
@@ -10555,7 +10555,7 @@
             "util/timer_queue_test.o",
             "util/timer_queue_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/timer_queue_test.cc"
     },
     {
@@ -10611,7 +10611,7 @@
             "utilities/cassandra/cassandra_serialize_test.o",
             "utilities/cassandra/cassandra_serialize_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cassandra/cassandra_serialize_test.cc"
     },
     {
@@ -10667,7 +10667,7 @@
             "utilities/write_batch_with_index/write_batch_with_index_internal.o",
             "utilities/write_batch_with_index/write_batch_with_index_internal.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/write_batch_with_index/write_batch_with_index_internal.cc"
     },
     {
@@ -10723,7 +10723,7 @@
             "utilities/write_batch_with_index/write_batch_with_index_test.o",
             "utilities/write_batch_with_index/write_batch_with_index_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/write_batch_with_index/write_batch_with_index_test.cc"
     },
     {
@@ -10779,7 +10779,7 @@
             "db/wide/wide_columns_helper_test.o",
             "db/wide/wide_columns_helper_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/wide/wide_columns_helper_test.cc"
     },
     {
@@ -10835,7 +10835,7 @@
             "utilities/options/options_util_test.o",
             "utilities/options/options_util_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/options/options_util_test.cc"
     },
     {
@@ -10891,7 +10891,7 @@
             "table/table_reader_bench.o",
             "table/table_reader_bench.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/table_reader_bench.cc"
     },
     {
@@ -10947,7 +10947,7 @@
             "table/meta_blocks.o",
             "table/meta_blocks.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/meta_blocks.cc"
     },
     {
@@ -11003,7 +11003,7 @@
             "cache/cache_bench_tool.o",
             "cache/cache_bench_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/cache_bench_tool.cc"
     },
     {
@@ -11059,7 +11059,7 @@
             "table/cuckoo/cuckoo_table_reader_test.o",
             "table/cuckoo/cuckoo_table_reader_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/cuckoo/cuckoo_table_reader_test.cc"
     },
     {
@@ -11115,7 +11115,7 @@
             "util/filelock_test.o",
             "util/filelock_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/filelock_test.cc"
     },
     {
@@ -11171,7 +11171,7 @@
             "logging/log_buffer.o",
             "logging/log_buffer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "logging/log_buffer.cc"
     },
     {
@@ -11227,7 +11227,7 @@
             "db/db_compaction_filter_test.o",
             "db/db_compaction_filter_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_compaction_filter_test.cc"
     },
     {
@@ -11283,7 +11283,7 @@
             "db/forward_iterator.o",
             "db/forward_iterator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/forward_iterator.cc"
     },
     {
@@ -11339,7 +11339,7 @@
             "util/repeatable_thread_test.o",
             "util/repeatable_thread_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/repeatable_thread_test.cc"
     },
     {
@@ -11395,7 +11395,7 @@
             "db/db_impl/db_impl_experimental.o",
             "db/db_impl/db_impl_experimental.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/db_impl_experimental.cc"
     },
     {
@@ -11451,7 +11451,7 @@
             "file/read_write_util.o",
             "file/read_write_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/read_write_util.cc"
     },
     {
@@ -11507,7 +11507,7 @@
             "monitoring/histogram.o",
             "monitoring/histogram.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/histogram.cc"
     },
     {
@@ -11563,7 +11563,7 @@
             "utilities/transactions/lock/range/range_tree/range_tree_lock_tracker.o",
             "utilities/transactions/lock/range/range_tree/range_tree_lock_tracker.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/range_tree_lock_tracker.cc"
     },
     {
@@ -11619,7 +11619,7 @@
             "tools/ldb_cmd_test.o",
             "tools/ldb_cmd_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/ldb_cmd_test.cc"
     },
     {
@@ -11675,7 +11675,7 @@
             "db/blob/blob_file_reader_test.o",
             "db/blob/blob_file_reader_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_reader_test.cc"
     },
     {
@@ -11731,7 +11731,7 @@
             "db/compaction/compaction_job.o",
             "db/compaction/compaction_job.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_job.cc"
     },
     {
@@ -11787,7 +11787,7 @@
             "db/db_with_timestamp_compaction_test.o",
             "db/db_with_timestamp_compaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_with_timestamp_compaction_test.cc"
     },
     {
@@ -11843,7 +11843,7 @@
             "db/plain_table_db_test.o",
             "db/plain_table_db_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/plain_table_db_test.cc"
     },
     {
@@ -11899,7 +11899,7 @@
             "util/data_structure.o",
             "util/data_structure.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/data_structure.cc"
     },
     {
@@ -11955,7 +11955,7 @@
             "db/compaction/compaction_picker_test.o",
             "db/compaction/compaction_picker_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_picker_test.cc"
     },
     {
@@ -12011,7 +12011,7 @@
             "utilities/agg_merge/agg_merge.o",
             "utilities/agg_merge/agg_merge.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/agg_merge/agg_merge.cc"
     },
     {
@@ -12067,7 +12067,7 @@
             "utilities/merge_operators/uint64add.o",
             "utilities/merge_operators/uint64add.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/merge_operators/uint64add.cc"
     },
     {
@@ -12123,7 +12123,7 @@
             "db_stress_tool/expected_value.o",
             "db_stress_tool/expected_value.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/expected_value.cc"
     },
     {
@@ -12179,7 +12179,7 @@
             "cache/cache_reservation_manager_test.o",
             "cache/cache_reservation_manager_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/cache_reservation_manager_test.cc"
     },
     {
@@ -12235,7 +12235,7 @@
             "util/ribbon_config.o",
             "util/ribbon_config.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/ribbon_config.cc"
     },
     {
@@ -12291,7 +12291,7 @@
             "db_stress_tool/db_stress_wide_merge_operator.o",
             "db_stress_tool/db_stress_wide_merge_operator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress_wide_merge_operator.cc"
     },
     {
@@ -12347,7 +12347,7 @@
             "trace_replay/io_tracer_test.o",
             "trace_replay/io_tracer_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "trace_replay/io_tracer_test.cc"
     },
     {
@@ -12403,7 +12403,7 @@
             "utilities/persistent_cache/block_cache_tier.o",
             "utilities/persistent_cache/block_cache_tier.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/persistent_cache/block_cache_tier.cc"
     },
     {
@@ -12459,7 +12459,7 @@
             "trace_replay/trace_record.o",
             "trace_replay/trace_record.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "trace_replay/trace_record.cc"
     },
     {
@@ -12515,7 +12515,7 @@
             "cache/cache_entry_roles.o",
             "cache/cache_entry_roles.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/cache_entry_roles.cc"
     },
     {
@@ -12571,7 +12571,7 @@
             "db/db_readonly_with_timestamp_test.o",
             "db/db_readonly_with_timestamp_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_readonly_with_timestamp_test.cc"
     },
     {
@@ -12627,7 +12627,7 @@
             "file/delete_scheduler.o",
             "file/delete_scheduler.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/delete_scheduler.cc"
     },
     {
@@ -12683,7 +12683,7 @@
             "env/composite_env.o",
             "env/composite_env.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/composite_env.cc"
     },
     {
@@ -12739,7 +12739,7 @@
             "file/sst_file_manager_impl.o",
             "file/sst_file_manager_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/sst_file_manager_impl.cc"
     },
     {
@@ -12795,7 +12795,7 @@
             "db/log_test.o",
             "db/log_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/log_test.cc"
     },
     {
@@ -12851,7 +12851,7 @@
             "monitoring/thread_status_impl.o",
             "monitoring/thread_status_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/thread_status_impl.cc"
     },
     {
@@ -12907,7 +12907,7 @@
             "port/win/env_win.o",
             "port/win/env_win.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "port/win/env_win.cc"
     },
     {
@@ -12963,7 +12963,7 @@
             "db/compaction/sst_partitioner.o",
             "db/compaction/sst_partitioner.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/sst_partitioner.cc"
     },
     {
@@ -13019,7 +13019,7 @@
             "cache/clock_cache.o",
             "cache/clock_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/clock_cache.cc"
     },
     {
@@ -13075,7 +13075,7 @@
             "table/block_based/block_builder.o",
             "table/block_based/block_builder.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_builder.cc"
     },
     {
@@ -13131,7 +13131,7 @@
             "port/win/io_win.o",
             "port/win/io_win.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "port/win/io_win.cc"
     },
     {
@@ -13187,7 +13187,7 @@
             "utilities/transactions/write_unprepared_txn.o",
             "utilities/transactions/write_unprepared_txn.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/write_unprepared_txn.cc"
     },
     {
@@ -13243,7 +13243,7 @@
             "tools/blob_dump.o",
             "tools/blob_dump.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/blob_dump.cc"
     },
     {
@@ -13299,7 +13299,7 @@
             "file/delete_scheduler_test.o",
             "file/delete_scheduler_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/delete_scheduler_test.cc"
     },
     {
@@ -13355,7 +13355,7 @@
             "options/configurable.o",
             "options/configurable.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/configurable.cc"
     },
     {
@@ -13411,7 +13411,7 @@
             "logging/event_logger_test.o",
             "logging/event_logger_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "logging/event_logger_test.cc"
     },
     {
@@ -13467,7 +13467,7 @@
             "test_util/sync_point.o",
             "test_util/sync_point.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "test_util/sync_point.cc"
     },
     {
@@ -13523,7 +13523,7 @@
             "db/blob/blob_file_addition.o",
             "db/blob/blob_file_addition.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_addition.cc"
     },
     {
@@ -13579,7 +13579,7 @@
             "table/block_based/block_based_table_factory.o",
             "table/block_based/block_based_table_factory.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_based_table_factory.cc"
     },
     {
@@ -13635,7 +13635,7 @@
             "db/flush_job_test.o",
             "db/flush_job_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/flush_job_test.cc"
     },
     {
@@ -13691,7 +13691,7 @@
             "test_util/sync_point_impl.o",
             "test_util/sync_point_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "test_util/sync_point_impl.cc"
     },
     {
@@ -13747,7 +13747,7 @@
             "db/table_properties_collector_test.o",
             "db/table_properties_collector_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/table_properties_collector_test.cc"
     },
     {
@@ -13803,7 +13803,7 @@
             "table/persistent_cache_helper.o",
             "table/persistent_cache_helper.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/persistent_cache_helper.cc"
     },
     {
@@ -13859,7 +13859,7 @@
             "db/db_impl/db_impl_readonly.o",
             "db/db_impl/db_impl_readonly.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/db_impl_readonly.cc"
     },
     {
@@ -13915,7 +13915,7 @@
             "port/win/win_logger.o",
             "port/win/win_logger.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "port/win/win_logger.cc"
     },
     {
@@ -13971,7 +13971,7 @@
             "options/db_options.o",
             "options/db_options.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/db_options.cc"
     },
     {
@@ -14027,7 +14027,7 @@
             "db/version_set_test.o",
             "db/version_set_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/version_set_test.cc"
     },
     {
@@ -14083,7 +14083,7 @@
             "db/db_flush_test.o",
             "db/db_flush_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_flush_test.cc"
     },
     {
@@ -14139,7 +14139,7 @@
             "utilities/cassandra/merge_operator.o",
             "utilities/cassandra/merge_operator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cassandra/merge_operator.cc"
     },
     {
@@ -14195,7 +14195,7 @@
             "cache/cache.o",
             "cache/cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/cache.cc"
     },
     {
@@ -14251,7 +14251,7 @@
             "utilities/util_merge_operators_test.o",
             "utilities/util_merge_operators_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/util_merge_operators_test.cc"
     },
     {
@@ -14307,7 +14307,7 @@
             "test_util/testutil.o",
             "test_util/testutil.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "test_util/testutil.cc"
     },
     {
@@ -14363,7 +14363,7 @@
             "memtable/vectorrep.o",
             "memtable/vectorrep.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/vectorrep.cc"
     },
     {
@@ -14419,7 +14419,7 @@
             "db/wide/wide_column_serialization.o",
             "db/wide/wide_column_serialization.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/wide/wide_column_serialization.cc"
     },
     {
@@ -14475,7 +14475,7 @@
             "utilities/cassandra/cassandra_compaction_filter.o",
             "utilities/cassandra/cassandra_compaction_filter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cassandra/cassandra_compaction_filter.cc"
     },
     {
@@ -14531,7 +14531,7 @@
             "utilities/env_timed.o",
             "utilities/env_timed.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/env_timed.cc"
     },
     {
@@ -14587,7 +14587,7 @@
             "file/readahead_raf.o",
             "file/readahead_raf.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/readahead_raf.cc"
     },
     {
@@ -14643,7 +14643,7 @@
             "monitoring/thread_status_updater_debug.o",
             "monitoring/thread_status_updater_debug.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/thread_status_updater_debug.cc"
     },
     {
@@ -14699,7 +14699,7 @@
             "db/blob/blob_log_writer.o",
             "db/blob/blob_log_writer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_log_writer.cc"
     },
     {
@@ -14755,7 +14755,7 @@
             "table/block_based/partitioned_index_reader.o",
             "table/block_based/partitioned_index_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/partitioned_index_reader.cc"
     },
     {
@@ -14811,7 +14811,7 @@
             "tools/db_sanity_test.o",
             "tools/db_sanity_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/db_sanity_test.cc"
     },
     {
@@ -14867,7 +14867,7 @@
             "utilities/transactions/transaction_util.o",
             "utilities/transactions/transaction_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/transaction_util.cc"
     },
     {
@@ -14923,7 +14923,7 @@
             "db/blob/blob_file_garbage_test.o",
             "db/blob/blob_file_garbage_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_garbage_test.cc"
     },
     {
@@ -14979,7 +14979,7 @@
             "env/unique_id_gen.o",
             "env/unique_id_gen.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/unique_id_gen.cc"
     },
     {
@@ -15035,7 +15035,7 @@
             "utilities/transactions/lock/range/range_tree/lib/locktree/range_buffer.o",
             "utilities/transactions/lock/range/range_tree/lib/locktree/range_buffer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/locktree/range_buffer.cc"
     },
     {
@@ -15091,7 +15091,7 @@
             "file/line_file_reader.o",
             "file/line_file_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/line_file_reader.cc"
     },
     {
@@ -15147,7 +15147,7 @@
             "utilities/write_batch_with_index/write_batch_with_index.o",
             "utilities/write_batch_with_index/write_batch_with_index.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/write_batch_with_index/write_batch_with_index.cc"
     },
     {
@@ -15203,7 +15203,7 @@
             "utilities/transactions/pessimistic_transaction.o",
             "utilities/transactions/pessimistic_transaction.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/pessimistic_transaction.cc"
     },
     {
@@ -15259,7 +15259,7 @@
             "util/comparator.o",
             "util/comparator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/comparator.cc"
     },
     {
@@ -15315,7 +15315,7 @@
             "table/merger_test.o",
             "table/merger_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/merger_test.cc"
     },
     {
@@ -15371,7 +15371,7 @@
             "cache/secondary_cache.o",
             "cache/secondary_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/secondary_cache.cc"
     },
     {
@@ -15427,7 +15427,7 @@
             "util/udt_util.o",
             "util/udt_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/udt_util.cc"
     },
     {
@@ -15483,7 +15483,7 @@
             "utilities/agg_merge/test_agg_merge.o",
             "utilities/agg_merge/test_agg_merge.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/agg_merge/test_agg_merge.cc"
     },
     {
@@ -15539,7 +15539,7 @@
             "utilities/transactions/snapshot_checker.o",
             "utilities/transactions/snapshot_checker.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/snapshot_checker.cc"
     },
     {
@@ -15595,7 +15595,7 @@
             "utilities/cassandra/test_utils.o",
             "utilities/cassandra/test_utils.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cassandra/test_utils.cc"
     },
     {
@@ -15651,7 +15651,7 @@
             "db/db_write_test.o",
             "db/db_write_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_write_test.cc"
     },
     {
@@ -15707,7 +15707,7 @@
             "table/sst_file_reader_test.o",
             "table/sst_file_reader_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/sst_file_reader_test.cc"
     },
     {
@@ -15763,7 +15763,7 @@
             "options/options_helper.o",
             "options/options_helper.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/options_helper.cc"
     },
     {
@@ -15819,7 +15819,7 @@
             "table/merging_iterator.o",
             "table/merging_iterator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/merging_iterator.cc"
     },
     {
@@ -15875,7 +15875,7 @@
             "db/compaction/compaction_service_job.o",
             "db/compaction/compaction_service_job.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_service_job.cc"
     },
     {
@@ -15931,7 +15931,7 @@
             "table/compaction_merging_iterator.o",
             "table/compaction_merging_iterator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/compaction_merging_iterator.cc"
     },
     {
@@ -15987,7 +15987,7 @@
             "db/perf_context_test.o",
             "db/perf_context_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/perf_context_test.cc"
     },
     {
@@ -16043,7 +16043,7 @@
             "db/blob/blob_file_meta.o",
             "db/blob/blob_file_meta.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_meta.cc"
     },
     {
@@ -16099,7 +16099,7 @@
             "db/compaction/compaction_job_test.o",
             "db/compaction/compaction_job_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_job_test.cc"
     },
     {
@@ -16155,7 +16155,7 @@
             "db/compaction/compaction_service_test.o",
             "db/compaction/compaction_service_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_service_test.cc"
     },
     {
@@ -16211,7 +16211,7 @@
             "table/table_properties.o",
             "table/table_properties.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/table_properties.cc"
     },
     {
@@ -16267,7 +16267,7 @@
             "utilities/transactions/optimistic_transaction_db_impl.o",
             "utilities/transactions/optimistic_transaction_db_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/optimistic_transaction_db_impl.cc"
     },
     {
@@ -16323,7 +16323,7 @@
             "utilities/persistent_cache/block_cache_tier_file.o",
             "utilities/persistent_cache/block_cache_tier_file.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/persistent_cache/block_cache_tier_file.cc"
     },
     {
@@ -16379,7 +16379,7 @@
             "table/block_based/block_based_table_reader.o",
             "table/block_based/block_based_table_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_based_table_reader.cc"
     },
     {
@@ -16435,7 +16435,7 @@
             "db/db_universal_compaction_test.o",
             "db/db_universal_compaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_universal_compaction_test.cc"
     },
     {
@@ -16491,7 +16491,7 @@
             "utilities/ttl/db_ttl_impl.o",
             "utilities/ttl/db_ttl_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/ttl/db_ttl_impl.cc"
     },
     {
@@ -16547,7 +16547,7 @@
             "monitoring/thread_status_updater.o",
             "monitoring/thread_status_updater.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/thread_status_updater.cc"
     },
     {
@@ -16603,7 +16603,7 @@
             "tools/dump/db_dump_tool.o",
             "tools/dump/db_dump_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/dump/db_dump_tool.cc"
     },
     {
@@ -16659,7 +16659,7 @@
             "util/stderr_logger.o",
             "util/stderr_logger.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/stderr_logger.cc"
     },
     {
@@ -16715,7 +16715,7 @@
             "db/db_inplace_update_test.o",
             "db/db_inplace_update_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_inplace_update_test.cc"
     },
     {
@@ -16771,7 +16771,7 @@
             "db/import_column_family_job.o",
             "db/import_column_family_job.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/import_column_family_job.cc"
     },
     {
@@ -16827,7 +16827,7 @@
             "db/blob/blob_source_test.o",
             "db/blob/blob_source_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_source_test.cc"
     },
     {
@@ -16883,7 +16883,7 @@
             "db/compaction/compaction_state.o",
             "db/compaction/compaction_state.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_state.cc"
     },
     {
@@ -16939,7 +16939,7 @@
             "utilities/transactions/lock/range/range_tree/lib/locktree/txnid_set.o",
             "utilities/transactions/lock/range/range_tree/lib/locktree/txnid_set.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/locktree/txnid_set.cc"
     },
     {
@@ -16995,7 +16995,7 @@
             "db/error_handler_fs_test.o",
             "db/error_handler_fs_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/error_handler_fs_test.cc"
     },
     {
@@ -17051,7 +17051,7 @@
             "db/write_thread.o",
             "db/write_thread.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/write_thread.cc"
     },
     {
@@ -17107,7 +17107,7 @@
             "db/db_iterator_test.o",
             "db/db_iterator_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_iterator_test.cc"
     },
     {
@@ -17163,7 +17163,7 @@
             "monitoring/statistics.o",
             "monitoring/statistics.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/statistics.cc"
     },
     {
@@ -17219,7 +17219,7 @@
             "db_stress_tool/db_stress_test_base.o",
             "db_stress_tool/db_stress_test_base.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress_test_base.cc"
     },
     {
@@ -17275,7 +17275,7 @@
             "util/crc32c.o",
             "util/crc32c.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/crc32c.cc"
     },
     {
@@ -17331,7 +17331,7 @@
             "db/db_table_properties_test.o",
             "db/db_table_properties_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_table_properties_test.cc"
     },
     {
@@ -17387,7 +17387,7 @@
             "env/env_chroot.o",
             "env/env_chroot.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/env_chroot.cc"
     },
     {
@@ -17443,7 +17443,7 @@
             "memory/memory_allocator.o",
             "memory/memory_allocator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memory/memory_allocator.cc"
     },
     {
@@ -17499,7 +17499,7 @@
             "db/db_kv_checksum_test.o",
             "db/db_kv_checksum_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_kv_checksum_test.cc"
     },
     {
@@ -17555,7 +17555,7 @@
             "db/db_iter_test.o",
             "db/db_iter_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_iter_test.cc"
     },
     {
@@ -17611,7 +17611,7 @@
             "port/mmap.o",
             "port/mmap.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "port/mmap.cc"
     },
     {
@@ -17667,7 +17667,7 @@
             "db/range_del_aggregator.o",
             "db/range_del_aggregator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/range_del_aggregator.cc"
     },
     {
@@ -17723,7 +17723,7 @@
             "memtable/write_buffer_manager.o",
             "memtable/write_buffer_manager.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/write_buffer_manager.cc"
     },
     {
@@ -17779,7 +17779,7 @@
             "trace_replay/trace_replay.o",
             "trace_replay/trace_replay.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "trace_replay/trace_replay.cc"
     },
     {
@@ -17835,7 +17835,7 @@
             "utilities/object_registry_test.o",
             "utilities/object_registry_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/object_registry_test.cc"
     },
     {
@@ -17891,7 +17891,7 @@
             "tools/io_tracer_parser.o",
             "tools/io_tracer_parser.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/io_tracer_parser.cc"
     },
     {
@@ -17947,7 +17947,7 @@
             "utilities/blob_db/blob_db.o",
             "utilities/blob_db/blob_db.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/blob_db/blob_db.cc"
     },
     {
@@ -18003,7 +18003,7 @@
             "db/db_impl/db_impl_files.o",
             "db/db_impl/db_impl_files.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/db_impl_files.cc"
     },
     {
@@ -18059,7 +18059,7 @@
             "cache/lru_cache.o",
             "cache/lru_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/lru_cache.cc"
     },
     {
@@ -18115,7 +18115,7 @@
             "db/event_helpers.o",
             "db/event_helpers.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/event_helpers.cc"
     },
     {
@@ -18171,7 +18171,7 @@
             "util/timer_test.o",
             "util/timer_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/timer_test.cc"
     },
     {
@@ -18227,7 +18227,7 @@
             "db/version_edit_handler.o",
             "db/version_edit_handler.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/version_edit_handler.cc"
     },
     {
@@ -18283,7 +18283,7 @@
             "utilities/transactions/optimistic_transaction.o",
             "utilities/transactions/optimistic_transaction.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/optimistic_transaction.cc"
     },
     {
@@ -18339,7 +18339,7 @@
             "util/rate_limiter.o",
             "util/rate_limiter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/rate_limiter.cc"
     },
     {
@@ -18395,7 +18395,7 @@
             "file/file_prefetch_buffer.o",
             "file/file_prefetch_buffer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/file_prefetch_buffer.cc"
     },
     {
@@ -18451,7 +18451,7 @@
             "util/file_reader_writer_test.o",
             "util/file_reader_writer_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/file_reader_writer_test.cc"
     },
     {
@@ -18507,7 +18507,7 @@
             "db/options_file_test.o",
             "db/options_file_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/options_file_test.cc"
     },
     {
@@ -18563,7 +18563,7 @@
             "table/block_based/filter_policy.o",
             "table/block_based/filter_policy.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/filter_policy.cc"
     },
     {
@@ -18619,7 +18619,7 @@
             "table/block_based/partitioned_index_iterator.o",
             "table/block_based/partitioned_index_iterator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/partitioned_index_iterator.cc"
     },
     {
@@ -18675,7 +18675,7 @@
             "utilities/merge_operators/string_append/stringappend2.o",
             "utilities/merge_operators/string_append/stringappend2.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/merge_operators/string_append/stringappend2.cc"
     },
     {
@@ -18731,7 +18731,7 @@
             "utilities/cache_dump_load_impl.o",
             "utilities/cache_dump_load_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cache_dump_load_impl.cc"
     },
     {
@@ -18787,7 +18787,7 @@
             "db/external_sst_file_test.o",
             "db/external_sst_file_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/external_sst_file_test.cc"
     },
     {
@@ -18843,7 +18843,7 @@
             "db/filename_test.o",
             "db/filename_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/filename_test.cc"
     },
     {
@@ -18899,7 +18899,7 @@
             "util/threadpool_imp.o",
             "util/threadpool_imp.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/threadpool_imp.cc"
     },
     {
@@ -18955,7 +18955,7 @@
             "utilities/transactions/write_prepared_transaction_test.o",
             "utilities/transactions/write_prepared_transaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/write_prepared_transaction_test.cc"
     },
     {
@@ -19011,7 +19011,7 @@
             "util/random.o",
             "util/random.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/random.cc"
     },
     {
@@ -19067,7 +19067,7 @@
             "db/blob/blob_file_addition_test.o",
             "db/blob/blob_file_addition_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_addition_test.cc"
     },
     {
@@ -19123,7 +19123,7 @@
             "db/compaction/compaction_picker_level.o",
             "db/compaction/compaction_picker_level.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_picker_level.cc"
     },
     {
@@ -19179,7 +19179,7 @@
             "db/dbformat_test.o",
             "db/dbformat_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/dbformat_test.cc"
     },
     {
@@ -19235,7 +19235,7 @@
             "db/snapshot_impl.o",
             "db/snapshot_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/snapshot_impl.cc"
     },
     {
@@ -19291,7 +19291,7 @@
             "table/plain/plain_table_reader.o",
             "table/plain/plain_table_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/plain/plain_table_reader.cc"
     },
     {
@@ -19347,7 +19347,7 @@
             "table/sst_file_reader.o",
             "table/sst_file_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/sst_file_reader.cc"
     },
     {
@@ -19403,7 +19403,7 @@
             "table/block_based/parsed_full_filter_block.o",
             "table/block_based/parsed_full_filter_block.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/parsed_full_filter_block.cc"
     },
     {
@@ -19459,7 +19459,7 @@
             "db/blob/blob_log_format.o",
             "db/blob/blob_log_format.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_log_format.cc"
     },
     {
@@ -19515,7 +19515,7 @@
             "util/filter_bench.o",
             "util/filter_bench.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/filter_bench.cc"
     },
     {
@@ -19571,7 +19571,7 @@
             "utilities/cassandra/cassandra_format_test.o",
             "utilities/cassandra/cassandra_format_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cassandra/cassandra_format_test.cc"
     },
     {
@@ -19627,7 +19627,7 @@
             "db/seqno_time_test.o",
             "db/seqno_time_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/seqno_time_test.cc"
     },
     {
@@ -19683,7 +19683,7 @@
             "tools/trace_analyzer.o",
             "tools/trace_analyzer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/trace_analyzer.cc"
     },
     {
@@ -19739,7 +19739,7 @@
             "utilities/merge_operators/put.o",
             "utilities/merge_operators/put.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/merge_operators/put.cc"
     },
     {
@@ -19795,7 +19795,7 @@
             "db_stress_tool/db_stress_listener.o",
             "db_stress_tool/db_stress_listener.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress_listener.cc"
     },
     {
@@ -19851,7 +19851,7 @@
             "db/experimental.o",
             "db/experimental.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/experimental.cc"
     },
     {
@@ -19907,7 +19907,7 @@
             "cache/compressed_secondary_cache.o",
             "cache/compressed_secondary_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/compressed_secondary_cache.cc"
     },
     {
@@ -19963,7 +19963,7 @@
             "db/db_block_cache_test.o",
             "db/db_block_cache_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_block_cache_test.cc"
     },
     {
@@ -20019,7 +20019,7 @@
             "util/rate_limiter_test.o",
             "util/rate_limiter_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/rate_limiter_test.cc"
     },
     {
@@ -20075,7 +20075,7 @@
             "table/mock_table.o",
             "table/mock_table.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/mock_table.cc"
     },
     {
@@ -20131,7 +20131,7 @@
             "db/compact_files_test.o",
             "db/compact_files_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compact_files_test.cc"
     },
     {
@@ -20187,7 +20187,7 @@
             "db/db_dynamic_level_test.o",
             "db/db_dynamic_level_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_dynamic_level_test.cc"
     },
     {
@@ -20243,7 +20243,7 @@
             "db/file_indexer_test.o",
             "db/file_indexer_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/file_indexer_test.cc"
     },
     {
@@ -20299,7 +20299,7 @@
             "db_stress_tool/db_stress_shared_state.o",
             "db_stress_tool/db_stress_shared_state.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress_shared_state.cc"
     },
     {
@@ -20355,7 +20355,7 @@
             "tools/db_bench_tool.o",
             "tools/db_bench_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/db_bench_tool.cc"
     },
     {
@@ -20411,7 +20411,7 @@
             "db/external_sst_file_basic_test.o",
             "db/external_sst_file_basic_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/external_sst_file_basic_test.cc"
     },
     {
@@ -20467,7 +20467,7 @@
             "env/env.o",
             "env/env.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/env.cc"
     },
     {
@@ -20523,7 +20523,7 @@
             "db_stress_tool/db_stress_common.o",
             "db_stress_tool/db_stress_common.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress_common.cc"
     },
     {
@@ -20579,7 +20579,7 @@
             "table/block_based/block_prefetcher.o",
             "table/block_based/block_prefetcher.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_prefetcher.cc"
     },
     {
@@ -20635,7 +20635,7 @@
             "table/cuckoo/cuckoo_table_builder.o",
             "table/cuckoo/cuckoo_table_builder.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/cuckoo/cuckoo_table_builder.cc"
     },
     {
@@ -20691,7 +20691,7 @@
             "tools/db_bench.o",
             "tools/db_bench.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/db_bench.cc"
     },
     {
@@ -20747,7 +20747,7 @@
             "db/db_test.o",
             "db/db_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_test.cc"
     },
     {
@@ -20803,7 +20803,7 @@
             "utilities/transactions/lock/range/range_tree/lib/locktree/treenode.o",
             "utilities/transactions/lock/range/range_tree/lib/locktree/treenode.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/locktree/treenode.cc"
     },
     {
@@ -20859,7 +20859,7 @@
             "table/block_based/data_block_hash_index_test.o",
             "table/block_based/data_block_hash_index_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/data_block_hash_index_test.cc"
     },
     {
@@ -20915,7 +20915,7 @@
             "table/block_based/flush_block_policy.o",
             "table/block_based/flush_block_policy.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/flush_block_policy.cc"
     },
     {
@@ -20971,7 +20971,7 @@
             "util/coding.o",
             "util/coding.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/coding.cc"
     },
     {
@@ -21027,7 +21027,7 @@
             "table/block_based/data_block_hash_index.o",
             "table/block_based/data_block_hash_index.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/data_block_hash_index.cc"
     },
     {
@@ -21083,7 +21083,7 @@
             "utilities/transactions/timestamped_snapshot_test.o",
             "utilities/transactions/timestamped_snapshot_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/timestamped_snapshot_test.cc"
     },
     {
@@ -21139,7 +21139,7 @@
             "db/db_bloom_filter_test.o",
             "db/db_bloom_filter_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_bloom_filter_test.cc"
     },
     {
@@ -21195,7 +21195,7 @@
             "utilities/cache_dump_load.o",
             "utilities/cache_dump_load.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cache_dump_load.cc"
     },
     {
@@ -21251,7 +21251,7 @@
             "utilities/transactions/lock/range/range_tree/range_tree_lock_manager.o",
             "utilities/transactions/lock/range/range_tree/range_tree_lock_manager.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/range_tree_lock_manager.cc"
     },
     {
@@ -21307,7 +21307,7 @@
             "db/db_tailing_iter_test.o",
             "db/db_tailing_iter_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_tailing_iter_test.cc"
     },
     {
@@ -21363,7 +21363,7 @@
             "test_util/secondary_cache_test_util.o",
             "test_util/secondary_cache_test_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "test_util/secondary_cache_test_util.cc"
     },
     {
@@ -21419,7 +21419,7 @@
             "utilities/transactions/lock/point/point_lock_manager.o",
             "utilities/transactions/lock/point/point_lock_manager.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/point/point_lock_manager.cc"
     },
     {
@@ -21475,7 +21475,7 @@
             "db/memtable_list_test.o",
             "db/memtable_list_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/memtable_list_test.cc"
     },
     {
@@ -21531,7 +21531,7 @@
             "db/version_edit_test.o",
             "db/version_edit_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/version_edit_test.cc"
     },
     {
@@ -21587,7 +21587,7 @@
             "file/file_util.o",
             "file/file_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/file_util.cc"
     },
     {
@@ -21643,7 +21643,7 @@
             "utilities/ttl/ttl_test.o",
             "utilities/ttl/ttl_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/ttl/ttl_test.cc"
     },
     {
@@ -21699,7 +21699,7 @@
             "util/compaction_job_stats_impl.o",
             "util/compaction_job_stats_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/compaction_job_stats_impl.cc"
     },
     {
@@ -21755,7 +21755,7 @@
             "db/obsolete_files_test.o",
             "db/obsolete_files_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/obsolete_files_test.cc"
     },
     {
@@ -21811,7 +21811,7 @@
             "monitoring/statistics_test.o",
             "monitoring/statistics_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/statistics_test.cc"
     },
     {
@@ -21867,7 +21867,7 @@
             "env/mock_env.o",
             "env/mock_env.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/mock_env.cc"
     },
     {
@@ -21923,7 +21923,7 @@
             "utilities/cassandra/cassandra_functional_test.o",
             "utilities/cassandra/cassandra_functional_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/cassandra/cassandra_functional_test.cc"
     },
     {
@@ -21979,7 +21979,7 @@
             "db/compaction/compaction_outputs.o",
             "db/compaction/compaction_outputs.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_outputs.cc"
     },
     {
@@ -22035,7 +22035,7 @@
             "db_stress_tool/db_stress_gflags.o",
             "db_stress_tool/db_stress_gflags.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress_gflags.cc"
     },
     {
@@ -22091,7 +22091,7 @@
             "db/blob/blob_file_cache.o",
             "db/blob/blob_file_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_cache.cc"
     },
     {
@@ -22147,7 +22147,7 @@
             "table/plain/plain_table_key_coding.o",
             "table/plain/plain_table_key_coding.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/plain/plain_table_key_coding.cc"
     },
     {
@@ -22203,7 +22203,7 @@
             "tools/sst_dump_tool.o",
             "tools/sst_dump_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/sst_dump_tool.cc"
     },
     {
@@ -22259,7 +22259,7 @@
             "monitoring/stats_history_test.o",
             "monitoring/stats_history_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/stats_history_test.cc"
     },
     {
@@ -22315,7 +22315,7 @@
             "utilities/transactions/lock/point/point_lock_manager_test.o",
             "utilities/transactions/lock/point/point_lock_manager_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/point/point_lock_manager_test.cc"
     },
     {
@@ -22371,7 +22371,7 @@
             "options/customizable.o",
             "options/customizable.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/customizable.cc"
     },
     {
@@ -22427,7 +22427,7 @@
             "port/win/port_win.o",
             "port/win/port_win.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "port/win/port_win.cc"
     },
     {
@@ -22483,7 +22483,7 @@
             "third-party/gtest-1.8.1/fused-src/gtest/gtest-all.o",
             "third-party/gtest-1.8.1/fused-src/gtest/gtest-all.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "third-party/gtest-1.8.1/fused-src/gtest/gtest-all.cc"
     },
     {
@@ -22539,7 +22539,7 @@
             "db/db_impl/db_impl_write.o",
             "db/db_impl/db_impl_write.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/db_impl_write.cc"
     },
     {
@@ -22595,7 +22595,7 @@
             "utilities/wal_filter.o",
             "utilities/wal_filter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/wal_filter.cc"
     },
     {
@@ -22651,7 +22651,7 @@
             "db/write_controller_test.o",
             "db/write_controller_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/write_controller_test.cc"
     },
     {
@@ -22707,7 +22707,7 @@
             "utilities/blob_db/blob_db_test.o",
             "utilities/blob_db/blob_db_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/blob_db/blob_db_test.cc"
     },
     {
@@ -22763,7 +22763,7 @@
             "db_stress_tool/cf_consistency_stress.o",
             "db_stress_tool/cf_consistency_stress.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/cf_consistency_stress.cc"
     },
     {
@@ -22819,7 +22819,7 @@
             "cache/cache_test.o",
             "cache/cache_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/cache_test.cc"
     },
     {
@@ -22875,7 +22875,7 @@
             "util/thread_local.o",
             "util/thread_local.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/thread_local.cc"
     },
     {
@@ -22931,7 +22931,7 @@
             "db/trim_history_scheduler.o",
             "db/trim_history_scheduler.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/trim_history_scheduler.cc"
     },
     {
@@ -22987,7 +22987,7 @@
             "db/db_iter.o",
             "db/db_iter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_iter.cc"
     },
     {
@@ -23043,7 +23043,7 @@
             "utilities/backup/backup_engine.o",
             "utilities/backup/backup_engine.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/backup/backup_engine.cc"
     },
     {
@@ -23099,7 +23099,7 @@
             "util/work_queue_test.o",
             "util/work_queue_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/work_queue_test.cc"
     },
     {
@@ -23155,7 +23155,7 @@
             "cache/cache_bench.o",
             "cache/cache_bench.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/cache_bench.cc"
     },
     {
@@ -23211,7 +23211,7 @@
             "utilities/convenience/info_log_finder.o",
             "utilities/convenience/info_log_finder.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/convenience/info_log_finder.cc"
     },
     {
@@ -23267,7 +23267,7 @@
             "db/db_io_failure_test.o",
             "db/db_io_failure_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_io_failure_test.cc"
     },
     {
@@ -23323,7 +23323,7 @@
             "utilities/transactions/write_committed_transaction_ts_test.o",
             "utilities/transactions/write_committed_transaction_ts_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/write_committed_transaction_ts_test.cc"
     },
     {
@@ -23379,7 +23379,7 @@
             "db/db_statistics_test.o",
             "db/db_statistics_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_statistics_test.cc"
     },
     {
@@ -23435,7 +23435,7 @@
             "env/fs_posix.o",
             "env/fs_posix.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/fs_posix.cc"
     },
     {
@@ -23491,7 +23491,7 @@
             "utilities/options/options_util.o",
             "utilities/options/options_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/options/options_util.cc"
     },
     {
@@ -23547,7 +23547,7 @@
             "table/block_based/hash_index_reader.o",
             "table/block_based/hash_index_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/hash_index_reader.cc"
     },
     {
@@ -23603,7 +23603,7 @@
             "db/compaction/compaction_iterator_test.o",
             "db/compaction/compaction_iterator_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_iterator_test.cc"
     },
     {
@@ -23659,7 +23659,7 @@
             "db/blob/blob_fetcher.o",
             "db/blob/blob_fetcher.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_fetcher.cc"
     },
     {
@@ -23715,7 +23715,7 @@
             "db/db_encryption_test.o",
             "db/db_encryption_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_encryption_test.cc"
     },
     {
@@ -23771,7 +23771,7 @@
             "db/write_controller.o",
             "db/write_controller.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/write_controller.cc"
     },
     {
@@ -23827,7 +23827,7 @@
             "db/db_test2.o",
             "db/db_test2.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_test2.cc"
     },
     {
@@ -23883,7 +23883,7 @@
             "monitoring/perf_level.o",
             "monitoring/perf_level.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/perf_level.cc"
     },
     {
@@ -23939,7 +23939,7 @@
             "env/file_system.o",
             "env/file_system.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/file_system.cc"
     },
     {
@@ -23995,7 +23995,7 @@
             "util/cleanable.o",
             "util/cleanable.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/cleanable.cc"
     },
     {
@@ -24051,7 +24051,7 @@
             "utilities/persistent_cache/persistent_cache_test.o",
             "utilities/persistent_cache/persistent_cache_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/persistent_cache/persistent_cache_test.cc"
     },
     {
@@ -24107,7 +24107,7 @@
             "table/iterator.o",
             "table/iterator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/iterator.cc"
     },
     {
@@ -24163,7 +24163,7 @@
             "db/db_clip_test.o",
             "db/db_clip_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_clip_test.cc"
     },
     {
@@ -24219,7 +24219,7 @@
             "db/blob/db_blob_corruption_test.o",
             "db/blob/db_blob_corruption_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/db_blob_corruption_test.cc"
     },
     {
@@ -24275,7 +24275,7 @@
             "db/write_callback_test.o",
             "db/write_callback_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/write_callback_test.cc"
     },
     {
@@ -24331,7 +24331,7 @@
             "db/comparator_db_test.o",
             "db/comparator_db_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/comparator_db_test.cc"
     },
     {
@@ -24387,7 +24387,7 @@
             "db/blob/db_blob_basic_test.o",
             "db/blob/db_blob_basic_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/db_blob_basic_test.cc"
     },
     {
@@ -24443,7 +24443,7 @@
             "trace_replay/trace_record_result.o",
             "trace_replay/trace_record_result.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "trace_replay/trace_record_result.cc"
     },
     {
@@ -24499,7 +24499,7 @@
             "db/merge_operator.o",
             "db/merge_operator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/merge_operator.cc"
     },
     {
@@ -24555,7 +24555,7 @@
             "memtable/memtablerep_bench.o",
             "memtable/memtablerep_bench.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/memtablerep_bench.cc"
     },
     {
@@ -24611,7 +24611,7 @@
             "table/cleanable_test.o",
             "table/cleanable_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/cleanable_test.cc"
     },
     {
@@ -24667,7 +24667,7 @@
             "db/blob/blob_file_garbage.o",
             "db/blob/blob_file_garbage.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_garbage.cc"
     },
     {
@@ -24723,7 +24723,7 @@
             "table/sst_file_dumper.o",
             "table/sst_file_dumper.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/sst_file_dumper.cc"
     },
     {
@@ -24779,7 +24779,7 @@
             "utilities/transactions/lock/range/range_tree/lib/locktree/concurrent_tree.o",
             "utilities/transactions/lock/range/range_tree/lib/locktree/concurrent_tree.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/locktree/concurrent_tree.cc"
     },
     {
@@ -24835,7 +24835,7 @@
             "util/random_test.o",
             "util/random_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/random_test.cc"
     },
     {
@@ -24891,7 +24891,7 @@
             "util/bloom_test.o",
             "util/bloom_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/bloom_test.cc"
     },
     {
@@ -24947,7 +24947,7 @@
             "utilities/transactions/write_unprepared_transaction_test.o",
             "utilities/transactions/write_unprepared_transaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/write_unprepared_transaction_test.cc"
     },
     {
@@ -25003,7 +25003,7 @@
             "table/cuckoo/cuckoo_table_reader.o",
             "table/cuckoo/cuckoo_table_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/cuckoo/cuckoo_table_reader.cc"
     },
     {
@@ -25059,7 +25059,7 @@
             "tools/ldb.o",
             "tools/ldb.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/ldb.cc"
     },
     {
@@ -25115,7 +25115,7 @@
             "logging/env_logger_test.o",
             "logging/env_logger_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "logging/env_logger_test.cc"
     },
     {
@@ -25171,7 +25171,7 @@
             "db/blob/blob_garbage_meter_test.o",
             "db/blob/blob_garbage_meter_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_garbage_meter_test.cc"
     },
     {
@@ -25227,7 +25227,7 @@
             "table/block_based/uncompression_dict_reader.o",
             "table/block_based/uncompression_dict_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/uncompression_dict_reader.cc"
     },
     {
@@ -25283,7 +25283,7 @@
             "utilities/transactions/lock/range/range_tree/lib/locktree/keyrange.o",
             "utilities/transactions/lock/range/range_tree/lib/locktree/keyrange.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/locktree/keyrange.cc"
     },
     {
@@ -25339,7 +25339,7 @@
             "db/db_with_timestamp_test_util.o",
             "db/db_with_timestamp_test_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_with_timestamp_test_util.cc"
     },
     {
@@ -25395,7 +25395,7 @@
             "db/wide/wide_columns_helper.o",
             "db/wide/wide_columns_helper.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/wide/wide_columns_helper.cc"
     },
     {
@@ -25451,7 +25451,7 @@
             "utilities/blob_db/blob_dump_tool.o",
             "utilities/blob_db/blob_dump_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/blob_db/blob_dump_tool.cc"
     },
     {
@@ -25507,7 +25507,7 @@
             "db/table_properties_collector.o",
             "db/table_properties_collector.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/table_properties_collector.cc"
     },
     {
@@ -25563,7 +25563,7 @@
             "table/cuckoo/cuckoo_table_factory.o",
             "table/cuckoo/cuckoo_table_factory.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/cuckoo/cuckoo_table_factory.cc"
     },
     {
@@ -25619,7 +25619,7 @@
             "db/listener_test.o",
             "db/listener_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/listener_test.cc"
     },
     {
@@ -25675,7 +25675,7 @@
             "util/xxhash.o",
             "util/xxhash.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/xxhash.cc"
     },
     {
@@ -25731,7 +25731,7 @@
             "db/wal_manager_test.o",
             "db/wal_manager_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/wal_manager_test.cc"
     },
     {
@@ -25787,7 +25787,7 @@
             "file/filename.o",
             "file/filename.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/filename.cc"
     },
     {
@@ -25843,7 +25843,7 @@
             "utilities/transactions/lock/range/range_tree/lib/locktree/manager.o",
             "utilities/transactions/lock/range/range_tree/lib/locktree/manager.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/locktree/manager.cc"
     },
     {
@@ -25899,7 +25899,7 @@
             "logging/auto_roll_logger_test.o",
             "logging/auto_roll_logger_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "logging/auto_roll_logger_test.cc"
     },
     {
@@ -25955,7 +25955,7 @@
             "db/db_log_iter_test.o",
             "db/db_log_iter_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_log_iter_test.cc"
     },
     {
@@ -26011,7 +26011,7 @@
             "utilities/simulator_cache/cache_simulator.o",
             "utilities/simulator_cache/cache_simulator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/simulator_cache/cache_simulator.cc"
     },
     {
@@ -26067,7 +26067,7 @@
             "table/block_based/block_based_table_reader_test.o",
             "table/block_based/block_based_table_reader_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_based_table_reader_test.cc"
     },
     {
@@ -26123,7 +26123,7 @@
             "db/write_batch_base.o",
             "db/write_batch_base.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/write_batch_base.cc"
     },
     {
@@ -26179,7 +26179,7 @@
             "env/file_system_tracer.o",
             "env/file_system_tracer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/file_system_tracer.cc"
     },
     {
@@ -26235,7 +26235,7 @@
             "db/compaction/compaction.o",
             "db/compaction/compaction.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction.cc"
     },
     {
@@ -26291,7 +26291,7 @@
             "utilities/transactions/transaction_test.o",
             "utilities/transactions/transaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/transaction_test.cc"
     },
     {
@@ -26347,7 +26347,7 @@
             "db/db_compaction_test.o",
             "db/db_compaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_compaction_test.cc"
     },
     {
@@ -26403,7 +26403,7 @@
             "options/options_settable_test.o",
             "options/options_settable_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/options_settable_test.cc"
     },
     {
@@ -26459,7 +26459,7 @@
             "db/flush_job.o",
             "db/flush_job.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/flush_job.cc"
     },
     {
@@ -26515,7 +26515,7 @@
             "utilities/merge_operators/string_append/stringappend_test.o",
             "utilities/merge_operators/string_append/stringappend_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/merge_operators/string_append/stringappend_test.cc"
     },
     {
@@ -26571,7 +26571,7 @@
             "env/mock_env_test.o",
             "env/mock_env_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/mock_env_test.cc"
     },
     {
@@ -26627,7 +26627,7 @@
             "utilities/debug.o",
             "utilities/debug.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/debug.cc"
     },
     {
@@ -26683,7 +26683,7 @@
             "table/get_context.o",
             "table/get_context.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/get_context.cc"
     },
     {
@@ -26739,7 +26739,7 @@
             "utilities/transactions/write_unprepared_txn_db.o",
             "utilities/transactions/write_unprepared_txn_db.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/write_unprepared_txn_db.cc"
     },
     {
@@ -26795,7 +26795,7 @@
             "logging/auto_roll_logger.o",
             "logging/auto_roll_logger.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "logging/auto_roll_logger.cc"
     },
     {
@@ -26851,7 +26851,7 @@
             "db/periodic_task_scheduler_test.o",
             "db/periodic_task_scheduler_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/periodic_task_scheduler_test.cc"
     },
     {
@@ -26907,7 +26907,7 @@
             "memory/memory_allocator_test.o",
             "memory/memory_allocator_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memory/memory_allocator_test.cc"
     },
     {
@@ -26963,7 +26963,7 @@
             "test_util/mock_time_env.o",
             "test_util/mock_time_env.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "test_util/mock_time_env.cc"
     },
     {
@@ -27019,7 +27019,7 @@
             "db/db_info_dumper.o",
             "db/db_info_dumper.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_info_dumper.cc"
     },
     {
@@ -27075,7 +27075,7 @@
             "tools/block_cache_analyzer/block_cache_trace_analyzer_tool.o",
             "tools/block_cache_analyzer/block_cache_trace_analyzer_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/block_cache_analyzer/block_cache_trace_analyzer_tool.cc"
     },
     {
@@ -27131,7 +27131,7 @@
             "db_stress_tool/db_stress_tool.o",
             "db_stress_tool/db_stress_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/db_stress_tool.cc"
     },
     {
@@ -27187,7 +27187,7 @@
             "monitoring/in_memory_stats_history.o",
             "monitoring/in_memory_stats_history.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/in_memory_stats_history.cc"
     },
     {
@@ -27243,7 +27243,7 @@
             "cache/lru_cache_test.o",
             "cache/lru_cache_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/lru_cache_test.cc"
     },
     {
@@ -27299,7 +27299,7 @@
             "db/db_write_buffer_manager_test.o",
             "db/db_write_buffer_manager_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_write_buffer_manager_test.cc"
     },
     {
@@ -27355,7 +27355,7 @@
             "tools/io_tracer_parser_test.o",
             "tools/io_tracer_parser_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/io_tracer_parser_test.cc"
     },
     {
@@ -27411,7 +27411,7 @@
             "utilities/simulator_cache/sim_cache.o",
             "utilities/simulator_cache/sim_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/simulator_cache/sim_cache.cc"
     },
     {
@@ -27467,7 +27467,7 @@
             "utilities/fault_injection_fs.o",
             "utilities/fault_injection_fs.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/fault_injection_fs.cc"
     },
     {
@@ -27523,7 +27523,7 @@
             "utilities/persistent_cache/block_cache_tier_metadata.o",
             "utilities/persistent_cache/block_cache_tier_metadata.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/persistent_cache/block_cache_tier_metadata.cc"
     },
     {
@@ -27579,7 +27579,7 @@
             "db/db_basic_test.o",
             "db/db_basic_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_basic_test.cc"
     },
     {
@@ -27635,7 +27635,7 @@
             "db/logs_with_prep_tracker.o",
             "db/logs_with_prep_tracker.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/logs_with_prep_tracker.cc"
     },
     {
@@ -27691,7 +27691,7 @@
             "db_stress_tool/batched_ops_stress.o",
             "db_stress_tool/batched_ops_stress.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/batched_ops_stress.cc"
     },
     {
@@ -27747,7 +27747,7 @@
             "utilities/transactions/write_prepared_txn_db.o",
             "utilities/transactions/write_prepared_txn_db.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/write_prepared_txn_db.cc"
     },
     {
@@ -27803,7 +27803,7 @@
             "db/db_secondary_test.o",
             "db/db_secondary_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_secondary_test.cc"
     },
     {
@@ -27859,7 +27859,7 @@
             "utilities/option_change_migration/option_change_migration_test.o",
             "utilities/option_change_migration/option_change_migration_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/option_change_migration/option_change_migration_test.cc"
     },
     {
@@ -27915,7 +27915,7 @@
             "db/range_del_aggregator_bench.o",
             "db/range_del_aggregator_bench.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/range_del_aggregator_bench.cc"
     },
     {
@@ -27971,7 +27971,7 @@
             "memtable/hash_linklist_rep.o",
             "memtable/hash_linklist_rep.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memtable/hash_linklist_rep.cc"
     },
     {
@@ -28027,7 +28027,7 @@
             "db/fault_injection_test.o",
             "db/fault_injection_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/fault_injection_test.cc"
     },
     {
@@ -28083,7 +28083,7 @@
             "db/wal_edit.o",
             "db/wal_edit.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/wal_edit.cc"
     },
     {
@@ -28139,7 +28139,7 @@
             "utilities/compaction_filters/remove_emptyvalue_compactionfilter.o",
             "utilities/compaction_filters/remove_emptyvalue_compactionfilter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/compaction_filters/remove_emptyvalue_compactionfilter.cc"
     },
     {
@@ -28195,7 +28195,7 @@
             "db/write_stall_stats.o",
             "db/write_stall_stats.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/write_stall_stats.cc"
     },
     {
@@ -28251,7 +28251,7 @@
             "util/crc32c_test.o",
             "util/crc32c_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/crc32c_test.cc"
     },
     {
@@ -28307,7 +28307,7 @@
             "db/convenience.o",
             "db/convenience.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/convenience.cc"
     },
     {
@@ -28363,7 +28363,7 @@
             "table/block_based/block_based_table_iterator.o",
             "table/block_based/block_based_table_iterator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_based_table_iterator.cc"
     },
     {
@@ -28419,7 +28419,7 @@
             "utilities/transactions/optimistic_transaction_test.o",
             "utilities/transactions/optimistic_transaction_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/optimistic_transaction_test.cc"
     },
     {
@@ -28475,7 +28475,7 @@
             "db/repair.o",
             "db/repair.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/repair.cc"
     },
     {
@@ -28531,7 +28531,7 @@
             "tools/ldb_cmd.o",
             "tools/ldb_cmd.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/ldb_cmd.cc"
     },
     {
@@ -28587,7 +28587,7 @@
             "util/thread_list_test.o",
             "util/thread_list_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/thread_list_test.cc"
     },
     {
@@ -28643,7 +28643,7 @@
             "utilities/checkpoint/checkpoint_impl.o",
             "utilities/checkpoint/checkpoint_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/checkpoint/checkpoint_impl.cc"
     },
     {
@@ -28699,7 +28699,7 @@
             "db/cuckoo_table_db_test.o",
             "db/cuckoo_table_db_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/cuckoo_table_db_test.cc"
     },
     {
@@ -28755,7 +28755,7 @@
             "utilities/table_properties_collectors/compact_on_deletion_collector_test.o",
             "utilities/table_properties_collectors/compact_on_deletion_collector_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/table_properties_collectors/compact_on_deletion_collector_test.cc"
     },
     {
@@ -28811,7 +28811,7 @@
             "utilities/compaction_filters.o",
             "utilities/compaction_filters.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/compaction_filters.cc"
     },
     {
@@ -28867,7 +28867,7 @@
             "db/db_iter_stress_test.o",
             "db/db_iter_stress_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_iter_stress_test.cc"
     },
     {
@@ -28923,7 +28923,7 @@
             "cache/sharded_cache.o",
             "cache/sharded_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/sharded_cache.cc"
     },
     {
@@ -28979,7 +28979,7 @@
             "db/compaction/clipping_iterator_test.o",
             "db/compaction/clipping_iterator_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/clipping_iterator_test.cc"
     },
     {
@@ -29035,7 +29035,7 @@
             "table/block_based/partitioned_filter_block.o",
             "table/block_based/partitioned_filter_block.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/partitioned_filter_block.cc"
     },
     {
@@ -29091,7 +29091,7 @@
             "tools/ldb_tool.o",
             "tools/ldb_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/ldb_tool.cc"
     },
     {
@@ -29147,7 +29147,7 @@
             "db/db_merge_operand_test.o",
             "db/db_merge_operand_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_merge_operand_test.cc"
     },
     {
@@ -29203,7 +29203,7 @@
             "env/env_test.o",
             "env/env_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/env_test.cc"
     },
     {
@@ -29259,7 +29259,7 @@
             "util/concurrent_task_limiter_impl.o",
             "util/concurrent_task_limiter_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/concurrent_task_limiter_impl.cc"
     },
     {
@@ -29315,7 +29315,7 @@
             "db/compaction/subcompaction_state.o",
             "db/compaction/subcompaction_state.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/subcompaction_state.cc"
     },
     {
@@ -29371,7 +29371,7 @@
             "table/adaptive/adaptive_table_factory.o",
             "table/adaptive/adaptive_table_factory.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/adaptive/adaptive_table_factory.cc"
     },
     {
@@ -29427,7 +29427,7 @@
             "table/block_fetcher.o",
             "table/block_fetcher.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_fetcher.cc"
     },
     {
@@ -29483,7 +29483,7 @@
             "options/configurable_test.o",
             "options/configurable_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/configurable_test.cc"
     },
     {
@@ -29539,7 +29539,7 @@
             "db/blob/blob_file_builder.o",
             "db/blob/blob_file_builder.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_builder.cc"
     },
     {
@@ -29595,7 +29595,7 @@
             "port/win/env_default.o",
             "port/win/env_default.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "port/win/env_default.cc"
     },
     {
@@ -29651,7 +29651,7 @@
             "table/block_based/binary_search_index_reader.o",
             "table/block_based/binary_search_index_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/binary_search_index_reader.cc"
     },
     {
@@ -29707,7 +29707,7 @@
             "table/format.o",
             "table/format.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/format.cc"
     },
     {
@@ -29763,7 +29763,7 @@
             "db/wide/wide_columns.o",
             "db/wide/wide_columns.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/wide/wide_columns.cc"
     },
     {
@@ -29819,7 +29819,7 @@
             "table/sst_file_writer.o",
             "table/sst_file_writer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/sst_file_writer.cc"
     },
     {
@@ -29875,7 +29875,7 @@
             "monitoring/persistent_stats_history.o",
             "monitoring/persistent_stats_history.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/persistent_stats_history.cc"
     },
     {
@@ -29931,7 +29931,7 @@
             "monitoring/iostats_context_test.o",
             "monitoring/iostats_context_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/iostats_context_test.cc"
     },
     {
@@ -29987,7 +29987,7 @@
             "db/dbformat.o",
             "db/dbformat.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/dbformat.cc"
     },
     {
@@ -30043,7 +30043,7 @@
             "file/writable_file_writer.o",
             "file/writable_file_writer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/writable_file_writer.cc"
     },
     {
@@ -30099,7 +30099,7 @@
             "cache/cache_helpers.o",
             "cache/cache_helpers.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/cache_helpers.cc"
     },
     {
@@ -30155,7 +30155,7 @@
             "utilities/merge_operators/sortlist.o",
             "utilities/merge_operators/sortlist.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/merge_operators/sortlist.cc"
     },
     {
@@ -30211,7 +30211,7 @@
             "utilities/merge_operators.o",
             "utilities/merge_operators.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/merge_operators.cc"
     },
     {
@@ -30267,7 +30267,7 @@
             "db/merge_helper.o",
             "db/merge_helper.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/merge_helper.cc"
     },
     {
@@ -30323,7 +30323,7 @@
             "db/blob/blob_file_builder_test.o",
             "db/blob/blob_file_builder_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_builder_test.cc"
     },
     {
@@ -30379,7 +30379,7 @@
             "db/blob/blob_garbage_meter.o",
             "db/blob/blob_garbage_meter.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_garbage_meter.cc"
     },
     {
@@ -30435,7 +30435,7 @@
             "env/io_posix_test.o",
             "env/io_posix_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/io_posix_test.cc"
     },
     {
@@ -30491,7 +30491,7 @@
             "db/blob/blob_file_cache_test.o",
             "db/blob/blob_file_cache_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_cache_test.cc"
     },
     {
@@ -30547,7 +30547,7 @@
             "file/random_access_file_reader_test.o",
             "file/random_access_file_reader_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/random_access_file_reader_test.cc"
     },
     {
@@ -30603,7 +30603,7 @@
             "utilities/object_registry.o",
             "utilities/object_registry.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/object_registry.cc"
     },
     {
@@ -30659,7 +30659,7 @@
             "memory/concurrent_arena.o",
             "memory/concurrent_arena.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memory/concurrent_arena.cc"
     },
     {
@@ -30715,7 +30715,7 @@
             "db/version_builder.o",
             "db/version_builder.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/version_builder.cc"
     },
     {
@@ -30771,7 +30771,7 @@
             "table/plain/plain_table_builder.o",
             "table/plain/plain_table_builder.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/plain/plain_table_builder.cc"
     },
     {
@@ -30827,7 +30827,7 @@
             "utilities/transactions/lock/range/range_tree/lib/util/memarena.o",
             "utilities/transactions/lock/range/range_tree/lib/util/memarena.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/util/memarena.cc"
     },
     {
@@ -30883,7 +30883,7 @@
             "db/c.o",
             "db/c.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/c.cc"
     },
     {
@@ -30939,7 +30939,7 @@
             "db/compaction/compaction_picker_universal.o",
             "db/compaction/compaction_picker_universal.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/compaction/compaction_picker_universal.cc"
     },
     {
@@ -30995,7 +30995,7 @@
             "table/table_test.o",
             "table/table_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/table_test.cc"
     },
     {
@@ -31051,7 +31051,7 @@
             "db/blob/prefetch_buffer_collection.o",
             "db/blob/prefetch_buffer_collection.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/prefetch_buffer_collection.cc"
     },
     {
@@ -31107,7 +31107,7 @@
             "memory/arena.o",
             "memory/arena.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memory/arena.cc"
     },
     {
@@ -31163,7 +31163,7 @@
             "util/heap_test.o",
             "util/heap_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/heap_test.cc"
     },
     {
@@ -31219,7 +31219,7 @@
             "cache/compressed_secondary_cache_test.o",
             "cache/compressed_secondary_cache_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/compressed_secondary_cache_test.cc"
     },
     {
@@ -31275,7 +31275,7 @@
             "util/dynamic_bloom.o",
             "util/dynamic_bloom.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/dynamic_bloom.cc"
     },
     {
@@ -31331,7 +31331,7 @@
             "utilities/trace/replayer_impl.o",
             "utilities/trace/replayer_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/trace/replayer_impl.cc"
     },
     {
@@ -31387,7 +31387,7 @@
             "db/db_impl/db_impl.o",
             "db/db_impl/db_impl.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/db_impl/db_impl.cc"
     },
     {
@@ -31443,7 +31443,7 @@
             "monitoring/thread_status_util.o",
             "monitoring/thread_status_util.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "monitoring/thread_status_util.cc"
     },
     {
@@ -31499,7 +31499,7 @@
             "table/block_based/block_prefix_index.o",
             "table/block_based/block_prefix_index.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "table/block_based/block_prefix_index.cc"
     },
     {
@@ -31555,7 +31555,7 @@
             "tools/trace_analyzer_tool.o",
             "tools/trace_analyzer_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/trace_analyzer_tool.cc"
     },
     {
@@ -31611,7 +31611,7 @@
             "utilities/memory/memory_test.o",
             "utilities/memory/memory_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/memory/memory_test.cc"
     },
     {
@@ -31667,7 +31667,7 @@
             "tools/dump/rocksdb_dump.o",
             "tools/dump/rocksdb_dump.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/dump/rocksdb_dump.cc"
     },
     {
@@ -31723,7 +31723,7 @@
             "utilities/env_mirror.o",
             "utilities/env_mirror.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/env_mirror.cc"
     },
     {
@@ -31779,7 +31779,7 @@
             "db/repair_test.o",
             "db/repair_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/repair_test.cc"
     },
     {
@@ -31835,7 +31835,7 @@
             "options/options_test.o",
             "options/options_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "options/options_test.cc"
     },
     {
@@ -31891,7 +31891,7 @@
             "tools/io_tracer_parser_tool.o",
             "tools/io_tracer_parser_tool.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/io_tracer_parser_tool.cc"
     },
     {
@@ -31947,7 +31947,7 @@
             "file/random_access_file_reader.o",
             "file/random_access_file_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "file/random_access_file_reader.cc"
     },
     {
@@ -32003,7 +32003,7 @@
             "utilities/merge_operators/string_append/stringappend.o",
             "utilities/merge_operators/string_append/stringappend.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/merge_operators/string_append/stringappend.cc"
     },
     {
@@ -32059,7 +32059,7 @@
             "utilities/transactions/lock/range/range_tree/lib/locktree/lock_request.o",
             "utilities/transactions/lock/range/range_tree/lib/locktree/lock_request.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/locktree/lock_request.cc"
     },
     {
@@ -32115,7 +32115,7 @@
             "utilities/transactions/pessimistic_transaction_db.o",
             "utilities/transactions/pessimistic_transaction_db.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/pessimistic_transaction_db.cc"
     },
     {
@@ -32171,7 +32171,7 @@
             "env/io_posix.o",
             "env/io_posix.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "env/io_posix.cc"
     },
     {
@@ -32227,7 +32227,7 @@
             "db/table_cache.o",
             "db/table_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/table_cache.cc"
     },
     {
@@ -32283,7 +32283,7 @@
             "test_util/testharness.o",
             "test_util/testharness.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "test_util/testharness.cc"
     },
     {
@@ -32339,7 +32339,7 @@
             "db_stress_tool/multi_ops_txns_stress.o",
             "db_stress_tool/multi_ops_txns_stress.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/multi_ops_txns_stress.cc"
     },
     {
@@ -32395,7 +32395,7 @@
             "utilities/transactions/lock/range/range_tree/lib/util/dbt.o",
             "utilities/transactions/lock/range/range_tree/lib/util/dbt.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/util/dbt.cc"
     },
     {
@@ -32451,7 +32451,7 @@
             "db/version_set.o",
             "db/version_set.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/version_set.cc"
     },
     {
@@ -32507,7 +32507,7 @@
             "memory/jemalloc_nodump_allocator.o",
             "memory/jemalloc_nodump_allocator.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "memory/jemalloc_nodump_allocator.cc"
     },
     {
@@ -32563,7 +32563,7 @@
             "cache/tiered_secondary_cache.o",
             "cache/tiered_secondary_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/tiered_secondary_cache.cc"
     },
     {
@@ -32619,7 +32619,7 @@
             "logging/event_logger.o",
             "logging/event_logger.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "logging/event_logger.cc"
     },
     {
@@ -32675,7 +32675,7 @@
             "utilities/transactions/lock/range/range_tree/lib/locktree/locktree.o",
             "utilities/transactions/lock/range/range_tree/lib/locktree/locktree.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "utilities/transactions/lock/range/range_tree/lib/locktree/locktree.cc"
     },
     {
@@ -32731,7 +32731,7 @@
             "trace_replay/block_cache_tracer.o",
             "trace_replay/block_cache_tracer.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "trace_replay/block_cache_tracer.cc"
     },
     {
@@ -32787,7 +32787,7 @@
             "cache/charged_cache.o",
             "cache/charged_cache.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "cache/charged_cache.cc"
     },
     {
@@ -32843,7 +32843,7 @@
             "tools/write_stress.o",
             "tools/write_stress.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "tools/write_stress.cc"
     },
     {
@@ -32899,7 +32899,7 @@
             "db/seqno_to_time_mapping.o",
             "db/seqno_to_time_mapping.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/seqno_to_time_mapping.cc"
     },
     {
@@ -32955,7 +32955,7 @@
             "db_stress_tool/expected_state.o",
             "db_stress_tool/expected_state.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db_stress_tool/expected_state.cc"
     },
     {
@@ -33011,7 +33011,7 @@
             "db/blob/blob_file_reader.o",
             "db/blob/blob_file_reader.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "db/blob/blob_file_reader.cc"
     },
     {
@@ -33067,7 +33067,7 @@
             "util/dynamic_bloom_test.o",
             "util/dynamic_bloom_test.cc"
         ],
-        "directory": "/workspaces/metarocks",
+        "directory": "/home/ubuntu/compaction-server/rocksdb",
         "file": "util/dynamic_bloom_test.cc"
     }
 ]
