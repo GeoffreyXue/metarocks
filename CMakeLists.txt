@@ -617,6 +617,10 @@ if(USE_FOLLY)
 endif()
 find_package(Threads REQUIRED)
 
+# Add arrow and parquet
+find_package(Arrow)
+list(APPEND THIRDPARTY_LIBS arrow parquet)
+
 # Main library source code
 
 set(SOURCES
