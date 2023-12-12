@@ -87,6 +87,11 @@ endif()
 
 include(CMakeDependentOption)
 
+
+# Include AWS SDK
+find_package(AWSSDK REQUIRED COMPONENTS sqs)
+
+
 if(MSVC)
   option(WITH_GFLAGS "build with GFlags" OFF)
   option(WITH_XPRESS "build with windows built in compression" OFF)
