@@ -28,6 +28,7 @@ const std::string kTempFileNameSuffix = "dbtmp";
 
 static const std::string kRocksDbTFileExt = "sst";
 static const std::string kParquetFileExt = "parquet";
+static const std::string kParquetDirName = "parquet";
 static const std::string kLevelDbTFileExt = "ldb";
 static const std::string kRocksDBBlobFileExt = "blob";
 static const std::string kArchivalDirName = "archive";
@@ -114,7 +115,7 @@ std::string MakeTableFileName(const std::string& path, uint64_t number) {
 }
 
 std::string MakeParquetFileName(const std::string& path, uint64_t number) {
-  return MakeFileName(path, number, kParquetFileExt.c_str());
+  return MakeFileName(path + "/" + kParquetDirName, number, kParquetFileExt.c_str());
 }
 
 std::string MakeTableFileName(uint64_t number) {
