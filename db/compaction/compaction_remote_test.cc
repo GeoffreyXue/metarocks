@@ -5,13 +5,12 @@
 
 #include <iostream>
 
-#include "db.h"
+#include "rocksdb/db.h"
 #include "db/compaction/compaction.h"
 #include "db/compaction/compaction_job.h"
 #include "rocksdb/compaction_service.h"
 #include "db/db_test_util.h"
 #include "port/stack_trace.h"
-#include "rocksdb/db.h"
 #include "rocksdb/options.h"
 #include "rocksdb/slice.h"
 #include "table/unique_id_impl.h"
