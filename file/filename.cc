@@ -114,6 +114,7 @@ std::string MakeTableFileName(const std::string& path, uint64_t number) {
   return MakeFileName(path, number, kRocksDbTFileExt.c_str());
 }
 
+// TODO: Uncomment once we can create the directory
 std::string MakeParquetFileName(const std::string& path, uint64_t number) {
   return MakeFileName(path + "/" + kParquetDirName, number, kParquetFileExt.c_str());
 }
