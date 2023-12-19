@@ -1,13 +1,14 @@
 #include "rocksdb/compaction_service.h"
 
-#include "monitoring/instrumented_mutex.h"
+#include "db/compaction/compaction_job.h"
 #include "rocksdb/db.h"
 #include "rocksdb/options.h"
 
 #include <iostream>
-#include <thread>
 
 #include <aws/core/Aws.h>
+#include <aws/core/utils/Array.h>
+#include <aws/core/utils/base64/Base64.h>
 #include <aws/core/utils/crypto/Sha256.h>
 #include <aws/core/utils/HashingUtils.h>
 #include <aws/core/utils/Outcome.h>
@@ -22,11 +23,10 @@ using std::endl;
 
 namespace ROCKSDB_NAMESPACE {
 
-//string kDBPath = "./rocksdb/rocksdb_parquet_example";
-//string kDBCompactionOutputPath = "./output";
+string kDBPath = "/home/ubuntu/s3fuse/conn.db";
+string kDBCompactionOutputPath = "/home/ubuntu/s3fuse/conn.db/output";
 string kCompactionRequestQueueUrl = "https://sqs.us-east-2.amazonaws.com/848490464384/request.fifo";
-string kCompactionResponseQueueUrl ="https://sqs.us-east-2.amazonaws.com/848490464384/request.fifo";
-
+string kCompactionResponseQueueUrl ="https://sqs.us-east-2.amazonaws.com/848490464384/response.fifo";
 
 string waitForResponse(const string &queueUrl) {
   Aws::SDKOptions options;
@@ -52,6 +52,7 @@ string waitForResponse(const string &queueUrl) {
     if (receive_outcome.IsSuccess()) {
       const auto &messages = receive_outcome.GetResult().GetMessages();
       if (!messages.empty()) {
+        std::cout << "Successfully received non-empty message" << std::endl;
         for (const auto &message : messages) {
           result = message.GetBody();
 
@@ -114,6 +115,7 @@ void sendMessage(const string &message, const string &queueUrl) {
 
       auto sm_out = sqs.SendMessage(smReq);
       if (sm_out.IsSuccess()) {
+        std::cout << "Successfully sent message out" << std::endl;
         return;
       } else {
         std::cerr << "Error sending message: " << sm_out.GetError().GetMessage()
@@ -134,12 +136,17 @@ CompactionServiceJobStatus ExternalCompactionService::StartV2(
   assert(info.db_name == db_path_);
 
   // Send message to queue
-  sendMessage(compaction_service_input, kCompactionRequestQueueUrl);
+  Aws::Utils::ByteBuffer messageBuffer = Aws::Utils::ByteBuffer(
+      reinterpret_cast<const unsigned char *>(compaction_service_input.c_str()),
+      compaction_service_input.length());
+  Aws::String base64Message = Aws::Utils::HashingUtils::Base64Encode(messageBuffer);
+
+  sendMessage(base64Message, kCompactionRequestQueueUrl);
 
   jobs_.emplace(info.job_id, compaction_service_input);
 
   // PRint dbug
-  std::cout << "StartV2: " << info.job_id << " " << compaction_service_input << std::endl;
+  std::cout << "StartV2: Sending job " << info.job_id << std::endl;
 
   // Decide if queue add successful
   CompactionServiceJobStatus s = CompactionServiceJobStatus::kSuccess;
@@ -160,14 +167,6 @@ void OpenAndCompactInThread(
       input, output, override_options);
 }
 
-// mock openandcompactinthread
-void StartRemote(
-    const OpenAndCompactOptions& options, const std::string& name,
-    const std::string& output_directory, const std::string& input,
-    std::string* output,
-    const CompactionServiceOptionsOverride& override_options, Status* s) {
-  
-}
 
 CompactionServiceJobStatus ExternalCompactionService::WaitForCompleteV2(
     const CompactionServiceJobInfo& info,
@@ -190,46 +189,19 @@ CompactionServiceJobStatus ExternalCompactionService::WaitForCompleteV2(
     return override_wait_status_;
   }
 
-  CompactionServiceOptionsOverride options_override;
-  options_override.env = options_->env;
-  options_override.file_checksum_gen_factory =
-      options_->file_checksum_gen_factory;
-  options_override.comparator = options_->comparator;
-  options_override.merge_operator = options_->merge_operator;
-  options_override.compaction_filter = options_->compaction_filter;
-  options_override.compaction_filter_factory =
-      options_->compaction_filter_factory;
-  options_override.prefix_extractor = options_->prefix_extractor;
-  options_override.table_factory = options_->table_factory;
-  options_override.sst_partitioner_factory = options_->sst_partitioner_factory;
-  options_override.statistics = statistics_;
-  if (!listeners_.empty()) {
-    options_override.listeners = listeners_;
+  string message = "";
+  while (message.empty()) {
+    message = waitForResponse(kCompactionResponseQueueUrl);
   }
 
-  if (!table_properties_collector_factories_.empty()) {
-    options_override.table_properties_collector_factories =
-        table_properties_collector_factories_;
-  }
+  // can we parse the result? CompactionServiceResult :: Read or whatever
+  CompactionServiceResult result;
+  Status s = CompactionServiceResult::Read(message, &result);
 
+  // result is good
+  *compaction_service_result = message;
 
-  Status s;
-  {
-    // const rocksdb::OpenAndCompactOptions options;
-    const std::string name = db_path_;
-    const std::string output_directory = db_path_ + "/" + std::to_string(info.job_id);
-    const std::string input = compaction_input;
-    std::string * output = compaction_service_result;
-    const rocksdb::CompactionServiceOptionsOverride override_options = options_override;
-
-    /*s = DB::OpenAndCompact(
-      options, name, output_directory,
-      input, output, override_options);*/
-    string message = waitForResponse(kCompactionResponseQueueUrl);
-    *output = message;
-
-    s = Status::OK(); // TODO: Don't do this
-  }
+  std::cout << "WaitForCompleteV2: Received job " << info.job_id << std::endl;
 
   if (is_override_wait_result_) {
     *compaction_service_result = override_wait_result_;
